@@ -1,4 +1,4 @@
-﻿## Security > Security Monitoring > Release Notes
+## Security > Security Monitoring > Release Notes
 
 
 ## 2017.07.20
