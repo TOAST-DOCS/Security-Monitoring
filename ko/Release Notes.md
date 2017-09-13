@@ -1,6 +1,6 @@
 ## Security > Security Monitoring > Release Notes
 
-## 2017.09.21
+### 2017.09.21
 
 #### 기능 개선/변경
 
