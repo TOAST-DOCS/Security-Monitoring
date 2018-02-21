@@ -1,4 +1,4 @@
-## Security > Security Monitoring > 개요
+## Security > Security Monitoring > Overview
 
 Security Monitoring 서비스는 NHN Entertainment에서 수년간 축적 및 검증된 IDS/SIEM 패턴 및 위협 관리 대응체계를 기반으로 24시간 365일 전문 인력이 높은 수준의 동일한 보안관제 서비스를 제공합니다.
 
