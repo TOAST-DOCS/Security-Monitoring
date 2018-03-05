@@ -1,4 +1,4 @@
-## Security > Security Monitoring > 콘솔 사용 가이드
+## Security > Security Monitoring > Console Guide
 
 Security Monitoring 서비스는 인스턴스에 대한 보안관제 서비스를 신청하고, 발생하는 관제 이벤트에 대해 모니터링할 수 있는 페이지를 제공합니다. 아래에서 Security Monitoring 콘솔의 사용 방법을 소개합니다.
 

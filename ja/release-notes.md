@@ -1,4 +1,4 @@
-## Security > Security Monitoring > 릴리스 노트
+## Security > Security Monitoring > Release Notes
 
 ### 2018.02.22
 
