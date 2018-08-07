@@ -1,5 +1,11 @@
 ## Security > Security Monitoring > Release Notes
 
+### 2018.08.28
+
+#### 기능 개선/변경
+* [Console] 보안관제 유선연락 및 이메일 정보 수집 및 이용동의 추가
+
+
 ### 2018.04.24
 
 #### 기능 개선/변경
