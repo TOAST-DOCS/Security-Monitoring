@@ -1,4 +1,16 @@
-## Security > Security Monitoring > Release Notes
+## Security > Security Monitoring > 릴리스 노트
+
+### 2018.10.23
+
+#### 기능 개선/변경
+* [API] 보안관제 대응 현황: 공격유형 내용 표기 개선
+* [API] 보안관제 대응 현황: 처리상태 변경 (대기 단계 미노출 처리)
+* [API] 그래프 데이터 취득 API 성능 개선
+* [API] 로깅 처리 개선
+
+#### 버그 수정
+* [Console] 개인정보동의 간헐적 버그 수정
+
 
 ### 2018.08.28
 
