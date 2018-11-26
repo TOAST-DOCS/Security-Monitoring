@@ -48,9 +48,7 @@ Security Monitoring 서비스는 NHN Entertainment에서 수년간 축적 및 �
 - 보안관제 업무 현황 이메일 발송 서비스 제공
 - 보안사고 발생시 유선 연락 서비스 제공
 
-## Security Monitoring 서비스 흐름
-<center>![alt](http://static.toastoven.net/prod_mss/img_01_new.png)</center>
-<center>[그림1] 보안관제 서비스 구성도</center>
+![securitymonitoring_00_201812.png](https://static.toastoven.net/prod_mss/securitymonitoring_00_201812.png)
 
 ### 참고
 * WAF는 Web Firewall 상품을 통해 이용이 가능합니다.
