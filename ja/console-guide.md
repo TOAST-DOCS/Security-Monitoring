@@ -1,4 +1,4 @@
-﻿## Security > Security Monitoring > コンソール使用ガイド
+## Security > Security Monitoring > コンソール使用ガイド
 
 ここではSecurity Monitoringコンソールの使用方法を説明します。
 
