@@ -1,4 +1,4 @@
-﻿## Security > Security Monitoring > 概要
+## Security > Security Monitoring > 概要
 
 Security Monitoringは、NHN Entertainmentで数年間蓄積し、検証されたIDS/SIEMパターンおよび危機管理対応体系をベースに、24時間365日専門スタッフが高水準の同じセキュリティー監視サービスを提供します。
 
