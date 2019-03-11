@@ -49,7 +49,7 @@ Security Monitoringは、NHN Entertainmentで数年間蓄積し、検証され�
 - セキュリティー監視業務状況のメール送信サービスを提供
 - セキュリティー事故発生時、電話連絡サービスを提供
 
-![securitymonitoring_00_201812.png](https://static.toastoven.net/prod_mss/securitymonitoring_00_201812.png)
+![securitymonitoring_00_201903_en.png](https://static.toastoven.net/prod_mss/securitymonitoring_00_201903_en.png)
 
 ### 参考
 * WAF(web application firewall)はWEB Firewallサービスで利用できます。
