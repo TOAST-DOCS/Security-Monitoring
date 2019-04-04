@@ -1,6 +1,6 @@
 ## Security > Security Monitoring > 개요
 
-Security Monitoring은 NHN Entertainment에서 수년간 축적 및 검증된 IDS/SIEM 패턴 및 위협 관리 대응 체계를 기반으로 24시간 365일 전문 인력이 높은 수준의 동일한 보안관제 서비스를 제공합니다.
+Security Monitoring은 NHN에서 수년간 축적 및 검증된 IDS/SIEM 패턴 및 위협 관리 대응 체계를 기반으로 24시간 365일 전문 인력이 높은 수준의 동일한 보안관제 서비스를 제공합니다.
 
 ## Security Monitoring 특장점
 
@@ -17,7 +17,7 @@ Security Monitoring은 NHN Entertainment에서 수년간 축적 및 검증된 ID
 - 자체 보안 조직 구성을 위한 보안 인력 확보 어려움 해소
 
 ### 파견 관제 업무 수준에 준한 차별화된 차세대 원격 보안관제 서비스를 제공합니다.
-- NHN Entertainment에서 수년간 검증된 강력한 IDS/SIEM 탐지 패턴을 통한 우수한 공격 탐지
+- NHN에서 수년간 검증된 강력한 IDS/SIEM 탐지 패턴을 통한 우수한 공격 탐지
 - 단순 패턴 매칭이 아닌 시나리오 기반의 SIEM 탐지 패턴을 조합하여 차별화된 보안관제 서비스 제공
 - 모든 위협 시도에 대한 원자료(raw data) 및 서비스를 고려한 영향력 검증 테스트 시행
 - 단순 이벤트 알림이 아닌 영향력 검증과 깊이 있는 패킷 덤프 분석 등을 통해 취약점 및 의심 사항에 대한 알림 서비스 제공
