@@ -1,46 +1,44 @@
-## Security > Security Monitoring > 콘솔 사용 가이드
+## Security > Security Monitoring > Console Guide 
 
-여기에서는 Security Monitoring 콘솔 사용 방법을 설명합니다.
+The Security Monitoring Service provides a page, where you can apply for security monitoring for instances and monitor surveillance events that occur. 
+Below describes how to use the console for Security Monitoring. 
 
-Security Monitoring 서비스를 사용하려면 **TOAST Console**에 로그인하고, 서비스 목록에서 **Security > Security Monitoring**을 클릭합니다.
+To apply for Security Monitoring, login to **TOAST Cloud Console**, and click to enable **Security > Security Monitoring** on the service list. 
 
-## 보안관제 서비스 신청 및 해제
-### 보안관제 대상 추가
-1. Security Monitoring 콘솔에서 **신청 현황** 탭을 클릭하고 **보안관제 서비스 미이용 현황**에서 관제 서비스를 이용할 인스턴스를 선택합니다.
-2. 선택된 목록을 확인한 뒤 **관제대상 추가** 버튼을 클릭해 관제 서비스를 신청합니다.
-3. 신청 후 <span style="color:#ab4642">**최대 1시간 이내에**</span> 해당 인스턴스에 대한 관제 서비스가 시작됩니다. 관제 서비스가 진행되면 **보안관제 서비스 이용 현황** 아래 **관제 현황** 열의 '접수대기' 상태가 '진행중'으로 변경됩니다.
+## Service Application and Release 
+### Add Security Monitoring Targets
+1. Go to <span style="color:#1995dc">**|Status of Application|** </span> of a product and check instance to use monitoring service for, in "Non-Service Status of Security Monitoring".
+2. Find the checked list and click **[Add Monitoring Targets]** to apply for surveillance. 
+3. <span style="color:#ab4642">**Within no more than 1 hour**</span> after applied, monitoring service begins for the corresponding instance. When the service is enabled, the "Applied" status of Monitoring in the "Service Status of Security Monitoring", changes into "In Service".  
 
-### 보안관제 대상 해제
-1. **보안관제 서비스 이용 현황** 목록에서 보안관제를 해제할 인스턴스를 선택한 후 **관제대상 해제** 버튼을 클릭합니다.
-해제 요청 후 <span style="color:#ab4642">**최대 1시간 이내**</span>에 해당 인스턴스에 대한 관제가 해제됩니다.
+###  Release from Security Monitoring
+1. Check the instance to release from security monitoring in the "Service Status of Security Monitoring" table and click **[Release from Security Monitoring]**.  
+<span style="color:#ab4642">**Within no more than 1 hour**</span> after service release is applied, surveillance on the corresponding instance is released. 
 
-## 보안관제 업무 수신 설정
-보안관제 서비스 중 발생하는 이벤트에 대해 수신 설정을 할 수 있습니다.
+## Receiving Information for Security Monitoring Events 
+You can receive information for security monitoring events while the service is enabled. 
 
 ![securitymonitoring_01_201812.png](http://static.toastoven.net/prod_mss/securitymonitoring_01_201812.png)
 
-### 긴급 건 유선 연락 허용
+### Enable Phone Communication for Urgency 
 
-긴급한 보안 이벤트가 발생하면 유선으로 연락받도록 신청할 수 있습니다.
+You can apply for phone communication for urgent security events. 
 
-**긴급건 유선연락 허용**에서 **예**를 클릭합니다.
+- If the service applicant is same as the receiver, the service is applied with the subscriber's phone information. 
+- But, if they are not same:
+1. Select **'NO'** for **[Applicant is same as Receiver]**. 
+2. Fill out information for the receiver and the contact. 
 
-- 신청자와 유선 연락 수신인이 같을 때
-  - **신청자와 유선연락 수신인 동일 여부**에서 **예**를 클릭하면 가입된 유선 연락처 정보로 신청됨
-- 신청자와 유선 연락 수신인이 다를 때
-1. **신청자와 유선연락 수신인 동일 여부**에서 **아니오**를 클릭합니다.
-2. **수신 담당자**와 **연락처**에 정보를 입력합니다.
+### Apply for Mail Notification on Progress 
 
-**위 개인정보 수집 및 이용에 동의합니다**를 선택합니다.
+You can be notified of responses to security monitoring events and the handling processes by email. 
+Delimit by ; to enter many accounts.   
 
-### 업무 처리 내역 메일 수신 신청
+3. Select **'Yes'** for **[Apply for Mail Notification on Progress]**.
+4. Fill out information for email address, and make sure **I agree to collecting and using personal information in the above** is checked. 
 
-보안관제 대응 및 처리 내역을 이메일로 받을 수 있습니다. 이메일 주소는 세미콜론(;)으로 구분해 여러 개를 입력할 수 있습니다.
-3. **업무처리내역 메일 수신 신청**에서 **예** 를 클릭합니다.
-4. **이메일 주소**에 정보를 입력하고 **위 개인정보 수집 및 이용에 동의합니다**를 선택합니다.
+## Check Security Monitoring Status
 
-## 보안관제 현황 확인
-
-**관제 현황** </span>  탭에서 보안관제 서비스를 신청한 인스턴스의 보안관제 대응 현황을 확인할 수 있습니다. 
+On the <span style="color:#1995dc">**|Monitoring Status|**</span>, you can find the progress of security monitoring on the applied instance.  
 
 ![securitymonitoring_02_201812.png](http://static.toastoven.net/prod_mss/securitymonitoring_02_201812.png)

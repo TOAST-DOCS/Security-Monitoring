@@ -1,56 +1,55 @@
-## Security > Security Monitoring > 개요
+## Security > Security Monitoring > Overview
 
-Security Monitoring은 NHN Entertainment에서 수년간 축적 및 검증된 IDS/SIEM 패턴 및 위협 관리 대응 체계를 기반으로 24시간 365일 전문 인력이 높은 수준의 동일한 보안관제 서비스를 제공합니다.
+Security Monitoring, based on accumulated and verified IDS/SIEM patterns and risk management response system of NHN, provides 24/7 high-level security surveillance service by professional engineers.  
 
-## Security Monitoring 특장점
+## Benefits 
 
-### 통제된 보안관제센터에서 보안관제 서비스를 제공합니다.
-- 물리적 보안 통제 완비(업무 공간 CCTV 설치 및 지문인식을 통한 출입 통제, 미라클 운영 등)
-- 업무 환경 망 분리, 정보 유출 통제 및 강화된 PC 보안 설정
-- 음향 장비와 관제 영상시스템을 활용한 다양한 보안관제 대시보드 화면을 구성하여 실시간 공격 변화 인지 및 대응
-- 서비스 연속성 보장, 무정전 대책 마련
+### Security Monitoring by Controlled Security Center 
+- Equipped with full physical security control system (e.g. CCTV installed in all business areas, access control by fingerprint recognition, or magic mirror operations).
+- Network divided for each work environment, control of information leakage and fortified pc security.
+- Various dashboard screen configuration supported by audio and video equipment system, so as to detect and respond to real-time change of attacks.
+- Service continuity ensured, and measures for interruptible power supply.
 
-### 24시간 365일 전문 인력의 보안관제 분석 및 운영 서비스를 제공하며 비용 절감 효과가 있습니다.
-- 다양한 해킹 위협에 대한 풍부한 경험을 보유한 숙련된 전문 보안관제  인력이 신속하게 영향력과 사고 여부 판단
-- 최신 공격 트렌드를 반영한 탐지 패턴 관리로 보안 위협에 대한 신속한 대응과 예방 가능
-- 보안관제 조직 및 유지에 필요한 비용 감소와 보안 관제를 전문가에게 위탁하여 IT 담당자의 보안 업무 부담 해소
-- 자체 보안 조직 구성을 위한 보안 인력 확보 어려움 해소
+### 24/7 Cost-Efficient Professional Monitoring and Operation Services 
+- Seasoned security personnel with sufficient experience in a variety of hacking threats promptly determine if it is an incident and its influences. 
+- Detection patterns are applied with the latest trends of attacks, in order to prevent or fast respond to threats.
+- Security monitoring services and cost-saving jobs, required for organizing and maintaining security works, are assigned to professionals so that IT personnel can focus on their main jobs.
+- Helps to resolve difficulties in securing security staff from within.
 
-### 파견 관제 업무 수준에 준한 차별화된 차세대 원격 보안관제 서비스를 제공합니다.
-- NHN Entertainment에서 수년간 검증된 강력한 IDS/SIEM 탐지 패턴을 통한 우수한 공격 탐지
-- 단순 패턴 매칭이 아닌 시나리오 기반의 SIEM 탐지 패턴을 조합하여 차별화된 보안관제 서비스 제공
-- 모든 위협 시도에 대한 원자료(raw data) 및 서비스를 고려한 영향력 검증 테스트 시행
-- 단순 이벤트 알림이 아닌 영향력 검증과 깊이 있는 패킷 덤프 분석 등을 통해 취약점 및 의심 사항에 대한 알림 서비스 제공
+### Distinctive Next-Generation Remote Security Service 
+- Proves to be excellent in detection of attacks through powerful IDS/SIEM detection patterns which are verified throughout years of operation in NHN.
+- Provides distinctive security monitoring service, by the combination of scenario-based SIEM detection pattern, not by simple pattern matching. 
+- Executes influence-verifying test in consideration of raw data and services for all threat attempts.
+- Notifies for vulnerabilities and suspicious acts, by influence verification and in-depth analysis in packet dumps, which are more than simple event notifications.
 
-### 보안관제 업무 처리 수행 내역을 콘솔에서 실시간으로 확인할 수 있습니다.
-- 보안관제에서 탐지 및 분석된 업무 내역을 콘솔에서 바로 확인 가능
-- 업무 시간 이외에도 침해 상황 발생 시 유선  전파를 통해 즉시 인지 가능
-- 보안관제 서비스 신청 인스턴스로 발생되는 IDS 발생 이벤트 화면 제공
-- 보안관제 업무 처리 내역을 이메일로 수신 가능
+### Real-Time Security Monitoring Checks on Console 
+- Security monitoring detection and analysis can be immediately found on a console.
+- Incidents are immediately recognized via network transmission, even during off-business hours.
+- An event screen for IDS occurrence is provided via instance applied for security monitoring.
+- Security monitoring work progress can be notified by email.
 
-## Security Monitoring 주요 기능
+## Main Features 
 
-### 침입 탐지
-- 24시간 365일 보안 관제 지원
-- 고도화된 IDS/SIEM 연관성 탐지 패턴 운용
-### 침입 분석
-- 이벤트 원시데이터(raw data) 및 패킷 덤프를 통한 깊이 있는 분석 업무 수행
-- 자체 보안관제 방법론에 의해 식별된 위험의 정오탐 분류 후 영향력 테스트 시행
-### 침입 대응
-- 식별된 취약점에 대한 정보 제공 및 전파
-- 침해 사고 발생 시 전파 및 보안관제에서 제공 가능한 침해 경로, 취약점 정보 제공
-- 침해 사고 발생 시 패킷 덤프 등 후속 대응 업무를 수행하여 사고 분석 지원
-### 침입 예방
-- 대외 동향 정보를 주기적으로 수집하여 신규 위협에 대한 탐지 패턴 생성
-- 과도한 오탐 등 실시간 이벤트 대응의 장애 요인에 대한 패턴 최적화
-### 정보 제공
-- 보안관제 WORK-FLOW 시스템을 이용해 콘솔에서 관제 업무 현황 제공
-- IDS 이벤트 발생 현황 대시보드 제공
-- 보안관제 업무 현황 이메일 발송 서비스 제공
-- 보안 사고 발생 시 유선 연락 서비스 제공
+### Detection 
+- Support 24/7 security monitoring and sophisticated detection pattern of IDS/SIEM relevancy
+### Analysis 
+- Perform in-depth analysis by using raw event data and packet dumps. 
+- Apply our own security monitoring methodology to detect and classify threats right from wrong, and perform influence testing. 
+### Response 
+- Provide and transmit information on identified weaknesses.
+- Provide information on the route and weakness of intrusion in transmission and network.
+- Perform follow-up responsive measures, like packet dumps, when an intrusion occurs, and support analysis.
+### Prevention 
+- Collect external data on a regular basis to create detection patterns for potential threats. 
+- Optimize patterns for error factors in real-time response to events, such as excessively false detection. 
+### Data Supply 
+- Share work status via console at the support of the security monitoring WORK-FLOW system.
+- Provide IDS event occurrence on dashboard.
+- Deliver security monitoring status by email.
+- Communicate on the phone when security incidents occur.
 
-![securitymonitoring_00_201812.png](https://static.toastoven.net/prod_mss/securitymonitoring_00_201812.png)
+![securitymonitoring_00_201903_en.png](https://static.toastoven.net/prod_mss/securitymonitoring_00_201903_en.png)
 
-### 참고
-* WAF(web application firewall)은 WEB Firewall 서비스로 이용할 수 있습니다.
-* DDoS 서비스는 준비 중입니다.
+### Reference 
+* WAF is available with the WEB Firewall service. 
+* DDoS is now under preparation.  
