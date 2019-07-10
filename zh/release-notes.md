@@ -1,17 +1,9 @@
 ## Security > Security Monitoring > Release Notes
 
-### July 23, 2019
-
-#### Feature Updates 
-* [Console] UI updated, including the initialization feature of SelectBox 
-* [API] Respond to API changes due to DSM version upgrades
-
-
 ### June 25, 2019
 
 #### Feature Updates
 * Put more emphasis on the phrases asking of user's consent 
-* Host changed for CAB appkey authentication
  
 
 ### May 14, 2019
