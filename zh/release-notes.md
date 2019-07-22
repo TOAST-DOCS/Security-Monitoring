@@ -4,7 +4,6 @@
 
 #### Feature Updates 
 * [Console] UI updated, including the initialization feature of SelectBox 
-* [API] Respond to API changes due to DSM version upgrades
 
 
 ### June 25, 2019
