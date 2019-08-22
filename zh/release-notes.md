@@ -1,5 +1,20 @@
 ## Security > Security Monitoring > Release Notes
 
+### August 27, 2019
+
+#### Feature Updates 
+* [Console] 다국어 글꼴 통일
+* [Console] 로그인 리다이렉션 처리
+
+#### 버그 수정
+* [Console] 관제현황 화면에서 처리상태 검색 시 항목코드 수정
+* [Console] 관제현황 화면에서 기간 검색 시 종료일 자정 지정
+* [Console] 관제현황 화면에서 언어 전환 시 대응현황리스트 UI깨짐 수정
+* [Console] 신청현황 화면에서 관제 해제 시 빌링 API URL 변경
+* [Batch] 토큰 만료 체크 시 기준 시간대 변경
+* [Batch] 빌링 API 호출 시 에러 핸들링 수정
+
+
 ### July 23, 2019
 
 #### Feature Updates 
@@ -9,14 +24,14 @@
 ### June 25, 2019
 
 #### Feature Updates
-* Put more emphasis on the phrases asking of user's consent 
+* [Console] Put more emphasis on the phrases asking of user's consent 
  
 
 ### May 14, 2019
 
 #### Updates
-* Changes in the mail delivery processing 
-* Translation enabled into multiple languages 
+* [API] Changes in the mail delivery processing 
+* [Console] Translation enabled into multiple languages 
 
 
 ### 2019.02.26
@@ -47,8 +62,8 @@
 ### 2018.10.23
 
 #### 기능 개선/변경
-* [API] 보안관제 대응 현황: 공격유형 내용 표기 개선
-* [API] 보안관제 대응 현황: 처리상태 변경 (대기 단계 미노출 처리)
+* [Console] 보안관제 대응 현황: 공격유형 내용 표기 개선
+* [Console] 보안관제 대응 현황: 처리상태 변경 (대기 단계 미노출 처리)
 * [API] 그래프 데이터 취득 API 성능 개선
 * [API] 로깅 처리 개선
 
@@ -77,6 +92,7 @@
 
 * [Console] 연동된 Instance가 없는 단일 로드밸런서에 대해 관제서비스 신청이 허용되는 버그 수정
 
+
 ### 2017.09.21
 
 #### 기능 개선/변경
@@ -87,12 +103,14 @@
 * [API] 보안관제 업무 수신 설정 이메일 등록 버그 수정
 * [API] 업무처리내역 티켓 메일 발송 시 버그 수정
 
+
 ### 2017.07.20
 
 #### 기능 개선/변경
 
 * [Console] 보안 관제 신청 대상에 Loadbalancer 추가
 * [Console] 관제 이력 탭 추가
+
 
 ### 2017.03.23
 
