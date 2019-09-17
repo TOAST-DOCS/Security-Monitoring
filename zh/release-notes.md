@@ -1,5 +1,11 @@
 ## Security > Security Monitoring > Release Notes
 
+### Sept. 24, 2019
+
+#### Feature Updates
+* [Console] Show information on ESM event detection and SoC ticket details
+
+
 ### August 27, 2019
 
 #### Feature Updates 
