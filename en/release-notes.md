@@ -1,37 +1,43 @@
 ## Security > Security Monitoring > Release Notes
 
+### Sept. 24, 2019
+
+#### Feature Updates
+* [Console] Show information on ESM event detection and SoC ticket details
+
+
 ### August 27, 2019
 
-#### Feature Updates 
-* [Console] Same fonts applied for multiple languages 
-* [Console] Logins processed for redirection 
+#### Feature Updates
+* [Console] Same fonts applied for multiple languages
+* [Console] Logins processed for redirection
 
-#### Bug Fixes 
-* [Console] Modified item codes in the search of processing status on the **Monitoring Status** page 
-* [Console] Allowed the search of cases of the end date as well, in the search of period on the **Monitoring Status** page 
+#### Bug Fixes
+* [Console] Modified item codes in the search of processing status on the **Monitoring Status** page
+* [Console] Allowed the search of cases of the end date as well, in the search of period on the **Monitoring Status** page
 * [Console] Properly showed UI of the list of status for language conversion on the **Monitoring Status** page
-* [Console] Changed URL for the billing API when monitoring is released on the **Application Status** page 
+* [Console] Changed URL for the billing API when monitoring is released on the **Application Status** page
 * [Batch] Changed standard time range as token expiration is confirmed
 * [Batch] Fixed error in handling of billing API calls
 
 
 ### July 23, 2019
 
-#### Feature Updates 
-* [Console] UI updated, including the initialization feature of SelectBox 
+#### Feature Updates
+* [Console] UI updated, including the initialization feature of SelectBox
 
 
 ### June 25, 2019
 
 #### Feature Updates
-* [Console] Put more emphasis on the phrases asking of user's consent 
+* [Console] Put more emphasis on the phrases asking of user's consent
  
 
 ### May 14, 2019
 
 #### Updates
-* [API] Changes in the mail delivery processing 
-* [Console] Translation enabled into multiple languages 
+* [API] Changes in the mail delivery processing
+* [Console] Translation enabled into multiple languages
 
 
 ### 2019.02.26

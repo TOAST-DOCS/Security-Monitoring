@@ -1,5 +1,11 @@
 ## Security > Security Monitoring > 릴리스 노트
 
+### 2019.09.24
+
+#### 기능 개선
+* [Console] ESM 이벤트 탐지 정보 노출 및 SoC 티켓 상세 표시
+
+
 ### 2019.08.27
 
 #### 기능 개선
