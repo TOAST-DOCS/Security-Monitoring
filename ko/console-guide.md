@@ -51,4 +51,4 @@ Security Monitoring 서비스를 사용하려면 **TOAST Console**에 로그인�
 **상세 이벤트 현황** </span>  탭에서 보안관제 서비스를 신청한 인스턴스의 상세 이벤트 현황을 확인할 수 있습니다. 
 상세 이벤트 목록은 최근 3개월 데이터에 대한 검색이 가능합니다.
 
-![securitymonitoring_03_202101_1.png](http://static.toastoven.net/prod_mss/securitymonitoring_03_202101_!.png)
+![securitymonitoring_03_202101.png](http://static.toastoven.net/prod_mss/securitymonitoring_03_202101.png)
