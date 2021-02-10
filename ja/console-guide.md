@@ -2,7 +2,7 @@
 
 ここではSecurity Monitoringコンソールの使用方法を説明します。
 
-Security Monitoringサービスを使用するには、**TOAST Console**にログインし、サービスリストから**Security > Security Monitoring**をクリックします。
+Security Monitoringサービスを使用するには、**NHN Cloud Console**にログインし、サービスリストから**Security > Security Monitoring**をクリックします。
 
 ## セキュリティー監視サービスの申請および解除
 ### セキュリティー監視対象を追加
