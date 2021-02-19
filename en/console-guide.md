@@ -3,7 +3,7 @@
 The Security Monitoring Service provides a page, where you can apply for security monitoring for instances and monitor surveillance events that occur. 
 Below describes how to use the console for Security Monitoring. 
 
-To apply for Security Monitoring, login to **NHN Cloud Cloud Console**, and click to enable **Security > Security Monitoring** on the service list. 
+To apply for Security Monitoring, login to **NHN Cloud Console**, and click to enable **Security > Security Monitoring** on the service list. 
 
 ## Service Application and Release 
 ### Add Security Monitoring Targets
