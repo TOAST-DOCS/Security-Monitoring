@@ -26,7 +26,7 @@ You can apply for phone communication for urgent security events.
 
 - If the service applicant is same as the receiver, the service is applied with the subscriber's phone information. 
 - But, if they are not same:
-1. Select **'NO'** for **[Applicant is same as Receiver]**. 
+ 1. Select **'NO'** for **[Applicant is same as Receiver]**. 
 2. Fill out information for the receiver and the contact. 
 
 ### Apply for Mail Notification on Progress 
@@ -39,6 +39,14 @@ Delimit by ; to enter many accounts.
 
 ## Check Security Monitoring Status
 
-On the <span style="color:#1995dc">**|Monitoring Status|**</span>, you can find the progress of security monitoring on the applied instance.  
+You can check the security control response status for the instance that you asked for security control service in the **Control Status** </span>   tab. 
+- Only data for the last 1 year can be searched from the security control response list.  
 
 ![securitymonitoring_02_201812.png](http://static.toastoven.net/prod_mss/securitymonitoring_02_201812.png)
+
+## Check detailed event status
+
+You can check the detailed event status for the instance that you asked for security control service in the - **Detailed event status** </span>   tab. 
+- Only data for the past 3 months can be searched from the detailed event list.
+
+![securitymonitoring_04_202101.png](http://static.toastoven.net/prod_mss/securitymonitoring_04_202101.png)
