@@ -49,7 +49,7 @@ Security Monitoring은 NHN에서 수년간 축적 및 검증된 IDS/SIEM 패턴 
 - 보안관제 업무 현황 이메일 발송 서비스 제공
 - 보안 사고 발생 시 유선 연락 서비스 제공
 
-![securitymonitoring_00_201903.png](https://static.toastoven.net/prod_mss/securitymonitoring_00_201903.png)
+![securitymonitoring_overview01_210525.png](https://static.toastoven.net/prod_mss/securitymonitoring_overview01_210525.png)
 
 ### 참고
 * WAF(web application firewall)은 WEB Firewall 서비스로 이용할 수 있습니다.
