@@ -48,7 +48,7 @@ Security Monitoring, based on accumulated and verified IDS/SIEM patterns and ris
 - Deliver security monitoring status by email.
 - Communicate on the phone when security incidents occur.
 
-![securitymonitoring_00_201903_en.png](https://static.toastoven.net/prod_mss/securitymonitoring_00_201903_en.png)
+![securitymonitoring_overview_en_210422.png](https://static.toastoven.net/prod_mss/securitymonitoring_overview_en_210422.png)
 
 ### Reference 
 * WAF is available with the WEB Firewall service. 
