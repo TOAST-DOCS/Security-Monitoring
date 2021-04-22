@@ -49,7 +49,7 @@ Security Monitoringは、NHNで数年間蓄積し、検証されたIDS/SIEMパ�
 - セキュリティー監視業務状況のメール送信サービスを提供
 - セキュリティー事故発生時、電話連絡サービスを提供
 
-![securitymonitoring_00_201903_en.png](https://static.toastoven.net/prod_mss/securitymonitoring_00_201903_en.png)
+![securitymonitoring_overview_en_210422.png](https://static.toastoven.net/prod_mss/securitymonitoring_overview_en_210422.png)
 
 ### 参考
 * WAF(web application firewall)はWEB Firewallサービスで利用できます。
