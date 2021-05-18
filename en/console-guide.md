@@ -18,7 +18,7 @@ To apply for Security Monitoring, login to **NHN Cloud Console**, and click to e
 ## Receiving Information for Security Monitoring Events 
 You can receive information for security monitoring events while the service is enabled. 
 
-![securitymonitoring_console_guide_en_210422.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_en_210422.png)
+![securitymonitoring_console_guide_en_210518.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_en_210518.png)
 
 ### Enable Phone Communication for Urgency 
 
