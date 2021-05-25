@@ -17,7 +17,7 @@ Security Monitoringサービスを使用するには、**NHN Cloud Console**に�
 ## セキュリティー監視業務の受信設定
 セキュリティー監視サービス中に発生するイベントに対して受信設定ができます。
 
-![securitymonitoring_console_guide_en_210422.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_en_210422.png)
+![securitymonitoring_console_guide_en_210518.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_en_210518.png)
 
 ### 緊急電話連絡の許可
 
