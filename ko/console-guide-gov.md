@@ -17,7 +17,7 @@ Security Monitoring 서비스를 사용하려면 **NHN Cloud (공공기관용) C
 ## 보안관제 업무 수신 설정
 보안관제 서비스 중 발생하는 이벤트에 대해 수신 설정을 할 수 있습니다.
 
-![securitymonitoring_console_guide_210518.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_210518.png)
+![securitymonitoring_console_guide_210625.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_210625.png)
 
 ### 긴급 건 유선 연락 허용
 
@@ -44,10 +44,10 @@ Security Monitoring 서비스를 사용하려면 **NHN Cloud (공공기관용) C
 - **관제 현황** </span>  탭에서 보안관제 서비스를 신청한 인스턴스의 보안관제 대응 현황을 확인할 수 있습니다. 
   - 보안관제 대응 목록은 최근 1년 데이터만 검색할 수 있습니다.
 
-![securitymonitoring_02_201812.png](http://static.toastoven.net/prod_mss/securitymonitoring_02_201812.png)
+![securitymonitoring_console_guide_210625_1.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_210625_1.png)
 
 ## 상세 이벤트 현황 확인
 - **상세 이벤트 현황** </span>  탭에서 보안관제 서비스를 신청한 인스턴스의 상세 이벤트 현황을 확인할 수 있습니다. 
   - 상세 이벤트 목록은 최근 3개월 데이터만 검색할 수 있습니다.
 
-![securitymonitoring_04_202101.png](http://static.toastoven.net/prod_mss/securitymonitoring_04_202101.png)
+![securitymonitoring_console_guide_210625_2.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_210625_2.png)
