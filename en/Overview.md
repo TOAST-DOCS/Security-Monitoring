@@ -52,4 +52,4 @@ Security Monitoring, based on accumulated and verified IDS/SIEM patterns and ris
 
 ### Reference 
 * WAF is available with the WEB Firewall service. 
-* DDoS is now under preparation.  
+* DDoS 공격방어는 DDoS Guard 서비스로 이용할 수 있습니다.
