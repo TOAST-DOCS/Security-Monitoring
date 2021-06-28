@@ -53,4 +53,4 @@ Security Monitoringは、NHNで数年間蓄積し、検証されたIDS/SIEMパ�
 
 ### 参考
 * WAF(web application firewall)はWEB Firewallサービスで利用できます。
-* DDoSサービスは準備中です。
+* DDoS攻撃のブロックはDDoS Guardサービスで行うことができます。
