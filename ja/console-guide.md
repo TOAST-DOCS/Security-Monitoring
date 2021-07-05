@@ -44,7 +44,7 @@ Security Monitoringサービスを使用するには、**NHN Cloud Console**に�
 - **監視状況**</span>タブでセキュリティ監視サービスを申請したインスタンスのセキュリティ監視対応状況を確認できます。 
   - セキュリティ監視対応リストは過去1年のデータのみ検索できます。
 
-![securitymonitoring_console_guide_jp_210625_1.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_jp_210625_1.png)
+![securitymonitoring_console_guide_jp_210629_1.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_jp_210629_1.png)
 
 ## 詳細イベント状況確認
 - **詳細イベント状況** </span> タブでセキュリティ監視サービスを申請したインスタンスの詳細イベント状況を確認できます。 

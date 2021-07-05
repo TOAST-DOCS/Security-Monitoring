@@ -53,4 +53,4 @@ Security Monitoring은 NHN에서 수년간 축적 및 검증된 IDS/SIEM 패턴 
 
 ### 참고
 * WAF(web application firewall)은 WEB Firewall 서비스로 이용할 수 있습니다.
-* DDoS 서비스는 준비 중입니다.
+* DDoS 공격 방어는 DDoS Guard 서비스로 이용할 수 있습니다.
