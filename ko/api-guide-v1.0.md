@@ -2,7 +2,7 @@
 [API 도메인]
 | 리전 | 도메인 |
 |---|---|
-| 한국(판교, 평촌) 리전 | https://kr1-cmhrbytwwy.api.nhncloudservice.com |
+| 한국(판교, 평촌) 리전 | https://kr1-secmon.api.nhncloudservice.com |
 
 ## 관제 등록 API
 
@@ -25,7 +25,7 @@
 [예]
 
 ```
-curl -X GET "https://kr1-cmhrbytwwy.api.nhncloudservice.com/v1.0/appkeys/{appKey}/not-applied-vms?regionCode=KR1" \
+curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/not-applied-vms?regionCode=KR1" \
  -H "Content-Type: application/json"
 ```
 
@@ -117,7 +117,7 @@ curl -X GET "https://kr1-cmhrbytwwy.api.nhncloudservice.com/v1.0/appkeys/{appKey
 [예]
 
 ```
-curl -X GET "https://kr1-cmhrbytwwy.api.nhncloudservice.com/v1.0/appkeys/{appKey}/applied-vms?regionCode=KR1" \
+curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/applied-vms?regionCode=KR1" \
  -H "Content-Type: application/json"
 ```
 
@@ -294,7 +294,7 @@ curl -X GET "https://kr1-cmhrbytwwy.api.nhncloudservice.com/v1.0/appkeys/{appKey
 [예]
 
 ```
-curl -X DELETE "https://kr1-cmhrbytwwy.api.nhncloudservice.com/v1.0/appkeys/{appKey}/vm?regionCode=KR1&vmId=8b031032-e0a0-4b36-8a98-642b6d3ca07b,1dc707a8-a5be-431e-aca1-77c60af1fe9a" \
+curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/vm?regionCode=KR1&vmId=8b031032-e0a0-4b36-8a98-642b6d3ca07b,1dc707a8-a5be-431e-aca1-77c60af1fe9a" \
  -H "Content-Type: application/json"
 ```
 * Loadbalancer에 연결된 형태의 VM을 관제 해제하기 위해서는 vmId 파라미터에 Loadbalancer ID만을 입력하여야 합니다.
@@ -332,7 +332,7 @@ curl -X DELETE "https://kr1-cmhrbytwwy.api.nhncloudservice.com/v1.0/appkeys/{app
 [예]
 
 ```
-curl -X GET "https://kr1-cmhrbytwwy.api.nhncloudservice.com/v1.0/appkeys/{appKey}/history?page=1" \
+curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/history?page=1" \
  -H "Content-Type: application/json"
 ```
 
@@ -373,7 +373,7 @@ curl -X GET "https://kr1-cmhrbytwwy.api.nhncloudservice.com/v1.0/appkeys/{appKey
             "historyId": 4530
         }
     ],
-    "next": "https://kr1-cmhrbytwwy.api.nhncloudservice.com/appkeys/{appKey}/history?page=2"
+    "next": "https://kr1-secmon.api.nhncloudservice.com/appkeys/{appKey}/history?page=2"
 }
 ```
 
@@ -413,7 +413,7 @@ curl -X GET "https://kr1-cmhrbytwwy.api.nhncloudservice.com/v1.0/appkeys/{appKey
 [예]
 
 ```
-curl -X GET "https://kr1-cmhrbytwwy.api.nhncloudservice.com/v1.0/appkeys/{appKey}/admin-info" \
+curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/admin-info" \
  -H "Content-Type: application/json"
 ```
 
@@ -517,7 +517,7 @@ curl -X GET "https://kr1-cmhrbytwwy.api.nhncloudservice.com/v1.0/appkeys/{appKey
 [예]
 
 ```
-curl -X GET "https://kr1-cmhrbytwwy.api.nhncloudservice.com/v1.0/appkeys/{appKey}/tickets?page=1" \
+curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/tickets?page=1" \
  -H "Content-Type: application/json"
 ```
 
@@ -603,7 +603,7 @@ curl -X GET "https://kr1-cmhrbytwwy.api.nhncloudservice.com/v1.0/appkeys/{appKey
 [예]
 
 ```
-curl -X GET "https://kr1-cmhrbytwwy.api.nhncloudservice.com/v1.0/appkeys/{appKey}/tickets/{ticketId}" \
+curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/tickets/{ticketId}" \
  -H "Content-Type: application/json"
 ```
 
@@ -661,7 +661,7 @@ curl -X GET "https://kr1-cmhrbytwwy.api.nhncloudservice.com/v1.0/appkeys/{appKey
 [예]
 
 ```
-curl -X GET "https://kr1-cmhrbytwwy.api.nhncloudservice.com/v1.0/appkeys/{appKey}/events?page=1&startDate=2021-07-01%2000:00&endDate=2021-07-13%2023:59" \
+curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/events?page=1&startDate=2021-07-01%2000:00&endDate=2021-07-13%2023:59" \
  -H "Content-Type: application/json"
 ```
 
