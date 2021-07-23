@@ -79,18 +79,18 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/no
 | header.resultCode | Integer | 結果コード |
 | header.resultMessage | String | 結果メッセージ |
 | results | List | 監視未申請状態のvmリスト |
-| results[0].lbIp | String | LoadbalancerのFloating IP |
-| results[0].vm | List | Loadbalancerに接続されたVMリスト |
+| results[0].lbIp | String | Load BalancerのFloating IP |
+| results[0].vm | List | Load Balancerに接続されたVMリスト |
 | results[0].vm[0].vmId | String | VMの識別子ID |
 | results[0].vm[0].fixedIp | String | VMのFixed IP |
 | results[0].vm[0].vmOs | String | VMのOS情報 |
 | results[0].vm[0].vmIp | String | VMのFloating IP |
 | results[0].vm[0].serviceStatus | String | VMのセキュリティ監視申請状態 |
 | results[0].vm[0].vmName | String | VMの名前 |
-| results[0].fixedIp | String | LoadbalancerのFixed IP |
-| results[0].lbId | String | Loadbalancerの識別子ID |
-| results[0].lbName | String | Loadbalancerの名前 |
-| results[0].serviceStatus | String | Loadbalancerのセキュリティ監視申請状態 |
+| results[0].fixedIp | String | Load BalancerのFixed IP |
+| results[0].lbId | String | Load Balancerの識別子ID |
+| results[0].lbName | String | Load Balancerの名前 |
+| results[0].serviceStatus | String | Load Balancerのセキュリティ監視申請状態 |
 | results[1].vmId | String | VMの識別子ID |
 | results[1].fixedIp | String | VMのFixed IP |
 | results[1].vmOs | String | VMのOS情報 |
@@ -171,18 +171,18 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 | header.resultCode | Integer | 結果コード |
 | header.resultMessage | String | 結果メッセージ |
 | results | List | 監視申請された状態のvmリスト |
-| results[0].lbIp | String | LoadbalancerのFloating IP |
-| results[0].vm | List | Loadbalancerに接続されたVMリスト |
+| results[0].lbIp | String | Load BalancerのFloating IP |
+| results[0].vm | List | Load Balancerに接続されたVMリスト |
 | results[0].vm[0].vmId | String | VMの識別子ID |
 | results[0].vm[0].fixedIp | String | VMのFixed IP |
 | results[0].vm[0].vmOs | String | VMのOS情報 |
 | results[0].vm[0].vmIp | String | VMのFloating IP |
 | results[0].vm[0].serviceStatus | String | VMのセキュリティ監視申請状態 |
 | results[0].vm[0].vmName | String | VMの名前 |
-| results[0].fixedIp | String | LoadbalancerのFixed IP |
-| results[0].lbId | String | Loadbalancerの識別子ID |
-| results[0].lbName | String | Loadbalancerの名前 |
-| results[0].serviceStatus | String | Loadbalancerのセキュリティ監視申請状態 |
+| results[0].fixedIp | String | Load BalancerのFixed IP |
+| results[0].lbId | String | Load Balancerの識別子ID |
+| results[0].lbName | String | Load Balancerの名前 |
+| results[0].serviceStatus | String | Load Balancerのセキュリティ監視申請状態 |
 | results[1].vmId | String | VMの識別子ID |
 | results[1].fixedIp | String | VMのFixed IP |
 | results[1].vmOs | String | VMのOS情報 |
@@ -242,23 +242,23 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 | 名前 | タイプ | 必須かどうか | デフォルト値 | 有効範囲 | 説明 |
 | --- | --- | --- | --- | --- | --- |
 | vmList | List | 必須 |  |  | 監視申請vmリスト |
-| vmList[0].lbIp | String | 必須 |  |  | LoadbalancerのFloating IP |
-| vmList[0].vm | List | 必須 |  |  | Loadbalancerに接続されたVMリスト |
+| vmList[0].lbIp | String | 必須 |  |  | Load BalancerのFloating IP |
+| vmList[0].vm | List | 必須 |  |  | Load Balancerに接続されたVMリスト |
 | vmList[0].vm[0].vmId | String | 必須 |  |  | VMの識別子ID |
 | vmList[0].vm[0].fixedIp | String | 必須 |  |  | VMのFixed IP |
 | vmList[0].vm[0].vmOs | String | 必須 |  |  | VMのOS情報 |
 | vmList[0].vm[0].vmIp | String | 必須 |  |  | VMのFloating IP |
 | vmList[0].vm[0].vmName | String | 必須 |  |  | VMの名前 |
-| vmList[0].fixedIp | String | 必須 |  |  | LoadbalancerのFixed IP |
-| vmList[0].lbId | String | 必須 |  |  | Loadbalancerの識別子ID |
-| vmList[0].lbName | String | 必須 |  |  | Loadbalancerの名前 |
+| vmList[0].fixedIp | String | 必須 |  |  | Load BalancerのFixed IP |
+| vmList[0].lbId | String | 必須 |  |  | Load Balancerの識別子ID |
+| vmList[0].lbName | String | 必須 |  |  | Load Balancerの名前 |
 | vmList[1].vmId | String | 必須 |  |  | VMの識別子ID |
 | vmList[1].fixedIp | String | 必須 |  |  | VMのFixed IP |
 | vmList[1].vmOs | String | 必須 |  |  | VMのOS情報 |
 | vmList[1].vmIp | String | 必須 |  |  | VMのFloating IP |
 | vmList[1].vmName | String | 必須 |  |  | VMの名前 |
 
-* Loadbalancerに接続された形態のVMの監視申請を行うには、vmList[0]のデータを必ず入力しなければならず、Loadbalancerに接続されていないVMを監視申請するにはvmList[1]のデータを必ず入力する必要があります。
+* Load Balancerに接続された形態のVMの監視申請を行うには、vmList[0]のデータを必ず入力しなければならず、Load Balancerに接続されていないVMを監視申請するにはvmList[1]のデータを必ず入力する必要があります。
 
 #### レスポンス
 
@@ -297,7 +297,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/vm?regionCode=KR1&vmId=8b031032-e0a0-4b36-8a98-642b6d3ca07b,1dc707a8-a5be-431e-aca1-77c60af1fe9a" \
  -H "Content-Type: application/json"
 ```
-* Loadbalancerに接続された形態のVMを監視解除するにはvmIdパラメータにLoadbalancer IDだけを入力する必要があります。
+* Load Balancerに接続された形態のVMを監視解除するにはvmIdパラメータにLoad Balancer IDだけを入力する必要があります。
 
 #### レスポンス
 
