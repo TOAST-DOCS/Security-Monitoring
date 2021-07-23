@@ -1,6 +1,6 @@
 ## Security > Security Monitoring > リリースノート
 
-### 2021. 07. 12.
+### 2021. 07. 27.
 
 #### 機能追加
 * [API] Open APIを提供
