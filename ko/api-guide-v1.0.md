@@ -79,18 +79,18 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/no
 | header.resultCode | Integer | 결과 코드 |
 | header.resultMessage | String | 결과 메시지 |
 | results | List | 관제 미신청 상태의 vm 목록 |
-| results[0].lbIp | String | Loadbalancer의 Floating IP |
-| results[0].vm | List | Loadbalancer에 연결된 VM 목록 |
+| results[0].lbIp | String | Load Balancer의 Floating IP |
+| results[0].vm | List | Load Balancer에 연결된 VM 목록 |
 | results[0].vm[0].vmId | String | VM의 식별자 ID |
 | results[0].vm[0].fixedIp | String | VM의 Fixed IP |
 | results[0].vm[0].vmOs | String | VM의 운영체제 정보 |
 | results[0].vm[0].vmIp | String | VM의 Floating IP |
 | results[0].vm[0].serviceStatus | String | VM의 보안관제 신청 상태 |
 | results[0].vm[0].vmName | String | VM의 이름 |
-| results[0].fixedIp | String | Loadbalancer의 Fixed IP |
-| results[0].lbId | String | Loadbalancer의 식별자 ID |
-| results[0].lbName | String | Loadbalancer의 이름 |
-| results[0].serviceStatus | String | Loadbalancer의 보안관제 신청 상태 |
+| results[0].fixedIp | String | Load Balancer의 Fixed IP |
+| results[0].lbId | String | Load Balancer의 식별자 ID |
+| results[0].lbName | String | Load Balancer의 이름 |
+| results[0].serviceStatus | String | Load Balancer의 보안관제 신청 상태 |
 | results[1].vmId | String | VM의 식별자 ID |
 | results[1].fixedIp | String | VM의 Fixed IP |
 | results[1].vmOs | String | VM의 운영체제 정보 |
@@ -171,18 +171,18 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 | header.resultCode | Integer | 결과 코드 |
 | header.resultMessage | String | 결과 메시지 |
 | results | List | 관제 신청된 상태의 vm 목록 |
-| results[0].lbIp | String | Loadbalancer의 Floating IP |
-| results[0].vm | List | Loadbalancer에 연결된 VM 목록 |
+| results[0].lbIp | String | Load Balancer의 Floating IP |
+| results[0].vm | List | Load Balancer에 연결된 VM 목록 |
 | results[0].vm[0].vmId | String | VM의 식별자 ID |
 | results[0].vm[0].fixedIp | String | VM의 Fixed IP |
 | results[0].vm[0].vmOs | String | VM의 운영체제 정보 |
 | results[0].vm[0].vmIp | String | VM의 Floating IP |
 | results[0].vm[0].serviceStatus | String | VM의 보안관제 신청 상태 |
 | results[0].vm[0].vmName | String | VM의 이름 |
-| results[0].fixedIp | String | Loadbalancer의 Fixed IP |
-| results[0].lbId | String | Loadbalancer의 식별자 ID |
-| results[0].lbName | String | Loadbalancer의 이름 |
-| results[0].serviceStatus | String | Loadbalancer의 보안관제 신청 상태 |
+| results[0].fixedIp | String | Load Balancer의 Fixed IP |
+| results[0].lbId | String | Load Balancer의 식별자 ID |
+| results[0].lbName | String | Load Balancer의 이름 |
+| results[0].serviceStatus | String | Load Balancer의 보안관제 신청 상태 |
 | results[1].vmId | String | VM의 식별자 ID |
 | results[1].fixedIp | String | VM의 Fixed IP |
 | results[1].vmOs | String | VM의 운영체제 정보 |
@@ -242,23 +242,23 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 | 이름 | 타입 | 필수 여부 | 기본값 | 유효 범위 | 설명 |
 | --- | --- | --- | --- | --- | --- |
 | vmList | List | 필수 |  |  | 관제 신청 vm 목록 |
-| vmList[0].lbIp | String | 필수 |  |  | Loadbalancer의 Floating IP |
-| vmList[0].vm | List | 필수 |  |  | Loadbalancer에 연결된 VM 목록 |
+| vmList[0].lbIp | String | 필수 |  |  | Load Balancer의 Floating IP |
+| vmList[0].vm | List | 필수 |  |  | Load Balancer에 연결된 VM 목록 |
 | vmList[0].vm[0].vmId | String | 필수 |  |  | VM의 식별자 ID |
 | vmList[0].vm[0].fixedIp | String | 필수 |  |  | VM의 Fixed IP |
 | vmList[0].vm[0].vmOs | String | 필수 |  |  | VM의 운영체제 정보 |
 | vmList[0].vm[0].vmIp | String | 필수 |  |  | VM의 Floating IP |
 | vmList[0].vm[0].vmName | String | 필수 |  |  | VM의 이름 |
-| vmList[0].fixedIp | String | 필수 |  |  | Loadbalancer의 Fixed IP |
-| vmList[0].lbId | String | 필수 |  |  | Loadbalancer의 식별자 ID |
-| vmList[0].lbName | String | 필수 |  |  | Loadbalancer의 이름 |
+| vmList[0].fixedIp | String | 필수 |  |  | Load Balancer의 Fixed IP |
+| vmList[0].lbId | String | 필수 |  |  | Load Balancer의 식별자 ID |
+| vmList[0].lbName | String | 필수 |  |  | Load Balancer의 이름 |
 | vmList[1].vmId | String | 필수 |  |  | VM의 식별자 ID |
 | vmList[1].fixedIp | String | 필수 |  |  | VM의 Fixed IP |
 | vmList[1].vmOs | String | 필수 |  |  | VM의 운영체제 정보 |
 | vmList[1].vmIp | String | 필수 |  |  | VM의 Floating IP |
 | vmList[1].vmName | String | 필수 |  |  | VM의 이름 |
 
-* Loadbalancer에 연결된 형태의 VM을 관제 신청하기 위해서는 vmList[0]의 데이터를 필수로 입력해야하며, Loadbalancer에 연결되지 않은 VM을 관제 신청하기 위해서는 vmList[1]의 데이터를 필수로 입력하여야 합니다.
+* Load Balancer에 연결된 형태의 VM을 관제 신청하기 위해서는 vmList[0]의 데이터를 필수로 입력해야하며, Load Balancer에 연결되지 않은 VM을 관제 신청하기 위해서는 vmList[1]의 데이터를 필수로 입력하여야 합니다.
 
 #### 응답
 
@@ -297,7 +297,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/vm?regionCode=KR1&vmId=8b031032-e0a0-4b36-8a98-642b6d3ca07b,1dc707a8-a5be-431e-aca1-77c60af1fe9a" \
  -H "Content-Type: application/json"
 ```
-* Loadbalancer에 연결된 형태의 VM을 관제 해제하기 위해서는 vmId 파라미터에 Loadbalancer ID만을 입력하여야 합니다.
+* Load Balancer에 연결된 형태의 VM을 관제 해제하기 위해서는 vmId 파라미터에 Load Balancer ID만을 입력하여야 합니다.
 
 #### 응답
 
