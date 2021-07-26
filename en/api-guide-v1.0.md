@@ -297,7 +297,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/vm?regionCode=KR1&vmId=8b031032-e0a0-4b36-8a98-642b6d3ca07b,1dc707a8-a5be-431e-aca1-77c60af1fe9a" \
  -H "Content-Type: application/json"
 ```
-* Load Balancer에 연결된 형태의 VM을 관제 해제하기 위해서는 vmId 파라미터에 Load Balancer ID만을 입력하여야 합니다.
+* To remove the control of VM which is connected to the Load Balancer, only Load Balancer ID must be entered in the vmId parameter.
 
 #### Response
 
