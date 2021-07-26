@@ -1,5 +1,10 @@
 ## Security > Security Monitoring > 릴리스 노트
 
+### 2021. 07. 27.
+
+#### 기능 추가
+* [API] Open API 제공
+
 ### 2019. 09. 24.
 
 #### 기능 개선
