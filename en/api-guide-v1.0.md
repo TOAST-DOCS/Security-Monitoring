@@ -1,7 +1,8 @@
 ## Security > Security Monitoring > API Guide
 [API domain]
+
 | Region | domain |
-|---|---|
+| --- | --- |
 | Korea (Pangyo, Pyeongchon) region | https://kr1-secmon.api.nhncloudservice.com |
 
 ## Control registration API
@@ -398,109 +399,6 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/hi
 | previous | String | URL link to previous page |
 | next | String | URL link to next page |
 
-## Control staff API
-
-### Search registration information of control staff
-
-#### Request
-
-[URI]
-
-| Method | URI |
-| --- | --- |
-| GET | /v1.0/appkeys/{appKey}/admin-info |
-
-[Example]
-
-```
-curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/admin-info" \
- -H "Content-Type: application/json"
-```
-
-#### Response
-
-[Response body]
-
-``` json
-{
-    "header": {
-        "resultCode": "1",
-        "resultMessage": "Request success",
-        "isSuccessful": true
-    },
-    "data": {
-        "allowTicket": true,
-        "userName": "Hong Gildong",
-        "ticketMail": "securitymonitoring-noti@toast.com",
-        "allowCall": true,
-        "userPhone": "",
-        "isAdmin": true
-    }
-}
-```
-
-[Field]
-
-| Field | Type | Description |
-| --- | --- | --- |
-| header | Object | Header area |
-| header.isSuccessful | Boolean | Success |
-| header.resultCode | Integer | Result code |
-| header.resultMessage | String | Result message |
-| data | Object | Registration information of control staff |
-| data.allowTicket | Boolean | Apply to receive email for work details |
-| data.userName | String | Staff name |
-| data.ticketMail | String | Email address to receive work details |
-| data.allowCall | Boolean | Apply for phone call for urgent cases |
-| data.userPhone | String | Staff phone number |
-| data.isAdmin | Boolean | Whether the control applicant and the phone call recipient are the same |
-
-### Register control staff
-
-#### Request
-
-[URI]
-
-| Method | URI |
-| --- | --- |
-| POST | /v1.0/appkeys/{appKey}/admin-info |
-
-[Request body]
-
-``` json
-{
-  "allowCall": true,
-  "isAdmin": true,
-  "userName": "Hong Gildong",
-  "userPhone": "",
-  "allowTicket": true,
-  "ticketMail": "securitymonitoring-noti@toast.com"
-}
-```
-
-[Field]
-
-| Name | Type | Necessity | Default | Valid range | Description |
-| --- | --- | --- | --- | --- | --- |
-| allowCall | Boolean | Required |  |  | Apply for phone call for urgent cases |
-| isAdmin | Boolean | Required |  |  | Whether the control applicant and the phone call recipient are the same |
-| userName | String | Required |  |  | Staff name |
-| allowTicket | Boolean | Required |  |  | Apply to receive email for work details |
-| ticketMail | String | Required |  |  | Email address to receive work details |
-
-#### Response
-
-[Response body]
-
-``` json
-{
-    "header": {
-        "resultCode": "1",
-        "resultMessage": "Request success",
-        "isSuccessful": true
-    }
-}
-```
 
 ## Security control response status
 
