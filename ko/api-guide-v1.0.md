@@ -3,7 +3,7 @@
 [API 도메인]
 
 | 리전 | 도메인 |
-|---|---|
+| --- | --- |
 | 한국(판교, 평촌) 리전 | https://kr1-secmon.api.nhncloudservice.com |
 
 ## 관제 등록 API
