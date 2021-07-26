@@ -3,7 +3,7 @@
 [APIドメイン]
 
 | リージョン | ドメイン |
-|---|---|
+| --- | --- |
 | 韓国(パンギョ、坪村)リージョン | https://kr1-secmon.api.nhncloudservice.com |
 
 ## 監視登録API
