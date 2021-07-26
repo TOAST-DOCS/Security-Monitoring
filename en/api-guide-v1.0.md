@@ -319,26 +319,26 @@ curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}
 
 [URI]
 
-| 메서드 | URI |
+| Method | URI |
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/history |
 
-[파라미터]
+[Parameter]
 
-| 이름 | 타입 | 필수 여부 | 기본값 | 유효 범위 | 설명 |
+| Name | Type | Necessity | Default | Valid range | Description |
 | --- | --- | --- | --- | --- | --- |
-| page | Integer | 선택 | 1 |  | 조회할 페이지 |
+| page | Integer | Optional | 1 |  | Page to search |
 
-[예]
+[Example]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/history?page=1" \
  -H "Content-Type: application/json"
 ```
 
-#### 응답
+#### Response
 
-[응답 본문]
+[Response body]
 
 ``` json
 {
@@ -351,24 +351,24 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/hi
     "previous": null,
     "results": [
         {
-            "status": "접수",
-            "reason": "사용자신청",
-            "contents": "보안관제 추가 진행 중 입니다.",
+            "status": "Received",
+            "reason": "Applied by user",
+            "contents": "Adding security control.",
             "vmId": "vm1 | vm2",
             "meter": "NO",
-            "type": "신규",
+            "type": "new",
             "regDate": "2021-07-09T15:34:29+09:00",
             "historyId": 4539
         },
         ...
         ,
         {
-            "status": "접수",
-            "reason": "사용자신청",
-            "contents": "보안관제 추가 진행 중 입니다.",
+            "status": "Received",
+            "reason": "Applied by user",
+            "contents": "Adding security control.",
             "vmId": "vm3",
             "meter": "NO",
-            "type": "신규",
+            "type": "new",
             "regDate": "2021-07-09T15:00:38+09:00",
             "historyId": 4530
         }
@@ -377,49 +377,49 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/hi
 }
 ```
 
-[필드]
+[Field]
 
-| 필드 | 타입 | 설명 |
+| Field | Type | Description |
 | --- | --- | --- |
-| header | Object | 헤더 영역 |
-| header.isSuccessful | Boolean | 성공 여부 |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| results | List | 관제 상태 변경 이력 목록 |
-| results[0].status | String | 관제 상태 |
-| results[0].reason | String | 관제 변경 사유 |
-| results[0].contents | String | 변경 내용 |
-| results[0].vmId | String | 변경 대상 |
-| results[0].meter | String | 과금 진행 여부 |
-| results[0].type | String | 변경 타입 |
-| results[0].regDate | Datetime | 이력 등록 일시 |
-| results[0].historyId | Integer | 이력 식별자 |
-| count | Integer | 이력 총 개수 |
-| previous | String | 이전 페이지 링크 URL |
-| next | String | 다음 페이지 링크 URL |
+| header | Object | Header area |
+| header.isSuccessful | Boolean | Success |
+| header.resultCode | Integer | Result code |
+| header.resultMessage | String | Result message |
+| results | List | List of change history of control status |
+| results[0].status | String | Control status |
+| results[0].reason | String | Reason to change control |
+| results[0].contents | String | Change detail |
+| results[0].vmId | String | Changing subject |
+| results[0].meter | String | Billing status |
+| results[0].type | String | Change type |
+| results[0].regDate | Datetime | History registration date |
+| results[0].historyId | Integer | History identifier |
+| count | Integer | Total number of history |
+| previous | String | URL link to previous page |
+| next | String | URL link to next page |
 
-## 관제 담당자 API
+## Control staff API
 
-### 관제 담당자 등록 정보 조회
+### Search registration information of control staff
 
-#### 요청
+#### Request
 
 [URI]
 
-| 메서드 | URI |
+| Method | URI |
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/admin-info |
 
-[예]
+[Example]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/admin-info" \
  -H "Content-Type: application/json"
 ```
 
-#### 응답
+#### Response
 
-[응답 본문]
+[Response body]
 
 ``` json
 {
@@ -430,7 +430,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ad
     },
     "data": {
         "allowTicket": true,
-        "userName": "홍길동",
+        "userName": "Hong Gildong",
         "ticketMail": "securitymonitoring-noti@toast.com",
         "allowCall": true,
         "userPhone": "",
@@ -439,58 +439,58 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ad
 }
 ```
 
-[필드]
+[Field]
 
-| 필드 | 타입 | 설명 |
+| Field | Type | Description |
 | --- | --- | --- |
-| header | Object | 헤더 영역 |
-| header.isSuccessful | Boolean | 성공 여부 |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| data | Object | 관제 담당자 등록 정보 |
-| data.allowTicket | Boolean | 업무처리내역 메일 수신 신청 |
-| data.userName | String | 담당자 이름 |
-| data.ticketMail | String | 업무처리내역 수신 메일 주소 |
-| data.allowCall | Boolean | 긴급건 유선연락 신청 |
-| data.userPhone | String | 담당자 전화번호 |
-| data.isAdmin | Boolean | 관제 신청자와 유선 연락 수신인 동일 여부 |
+| header | Object | Header area |
+| header.isSuccessful | Boolean | Success |
+| header.resultCode | Integer | Result code |
+| header.resultMessage | String | Result message |
+| data | Object | Registration information of control staff |
+| data.allowTicket | Boolean | Apply to receive email for work details |
+| data.userName | String | Staff name |
+| data.ticketMail | String | Email address to receive work details |
+| data.allowCall | Boolean | Apply for phone call for urgent cases |
+| data.userPhone | String | Staff phone number |
+| data.isAdmin | Boolean | Whether the control applicant and the phone call recipient are the same |
 
-### 관제 담당자 등록
+### Register control staff
 
-#### 요청
+#### Request
 
 [URI]
 
-| 메서드 | URI |
+| Method | URI |
 | --- | --- |
 | POST | /v1.0/appkeys/{appKey}/admin-info |
 
-[요청 본문]
+[Request body]
 
 ``` json
 {
   "allowCall": true,
   "isAdmin": true,
-  "userName": "홍길동",
+  "userName": "Hong Gildong",
   "userPhone": "",
   "allowTicket": true,
   "ticketMail": "securitymonitoring-noti@toast.com"
 }
 ```
 
-[필드]
+[Field]
 
-| 이름 | 타입 | 필수 여부 | 기본값 | 유효 범위 | 설명 |
+| Name | Type | Necessity | Default | Valid range | Description |
 | --- | --- | --- | --- | --- | --- |
-| allowCall | Boolean | 필수 |  |  | 긴급건 유선연락 신청 |
-| isAdmin | Boolean | 필수 |  |  | 관제 신청자와 유선연락 수신인 동일 여부 |
-| userName | String | 필수 |  |  | 담당자 이름 |
-| allowTicket | Boolean | 필수 |  |  | 업무처리내역 메일 수신 신청 |
-| ticketMail | String | 필수 |  |  | 업무처리내역 수신 메일 주소 |
+| allowCall | Boolean | Required |  |  | Apply for phone call for urgent cases |
+| isAdmin | Boolean | Required |  |  | Whether the control applicant and the phone call recipient are the same |
+| userName | String | Required |  |  | Staff name |
+| allowTicket | Boolean | Required |  |  | Apply to receive email for work details |
+| ticketMail | String | Required |  |  | Email address to receive work details |
 
-#### 응답
+#### Response
 
-[응답 본문]
+[Response body]
 
 ``` json
 {
@@ -502,34 +502,34 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ad
 }
 ```
 
-## 보안관제 대응 현황
+## Security control response status
 
-### 대응 현황 목록 조회
+### Search response status list
 
-#### 요청
+#### Request
 
 [URI]
 
-| 메서드 | URI |
+| Method | URI |
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/tickets |
 
-[예]
+[Example]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/tickets?page=1" \
  -H "Content-Type: application/json"
 ```
 
-[파라미터]
+[Parameter]
 
-| 이름 | 타입 | 필수 여부 | 기본값 | 유효 범위 | 설명 |
+| Name | Type | Necessity | Default | Valid range | Description |
 | --- | --- | --- | --- | --- | --- |
-| page | Integer | 선택 | 1 |  | 조회할 페이지 |
+| page | Integer | Optional | 1 |  | Page to search |
 
-#### 응답
+#### Response
 
-[응답 본문]
+[Response body]
 
 ``` json
 {
@@ -543,73 +543,73 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
     "results": [
         {
             "detectDate": "2020-02-03T16:49:00+09:00",
-            "isAttack": "정탐",
-            "ticketStatus": "처리완료",
-            "attackType": "Network 침해",
+            "isAttack": "True positive",
+            "ticketStatus": "Processing complete",
+            "attackType": "Network violated",
             "srcIp": "120.24.86.122",
             "ticketId": "98425190186514912",
             "dstIp": "103.243.201.11",
-            "ticketType": "침해사고",
+            "ticketType": "Violation"",
             "ticketName": "K047_NHN_WebShell_Alert"
         },
         {
             "detectDate": "2016-04-21T01:09:00+09:00",
-            "isAttack": "정탐",
-            "ticketStatus": "처리완료",
+            "isAttack": "True positive",
+            "ticketStatus": "Processing complete",
             "attackType": "Brute Force",
             "srcIp": "209.126.122.16",
             "ticketId": "96147997888715867",
             "dstIp": "103.194.108.15",
-            "ticketType": "침입탐지",
-            "ticketName": "판교IDC 미등록(103.194.108.15) Bruteforce_Inbound"
+            "ticketType": "Intrusion detected",
+            "ticketName": "Pangyo IDC unregistered(103.194.108.15) 
         }
     ],
     "next": null
 }
 ```
 
-[필드]
+[Field]
 
-| 필드 | 타입 | 설명 |
+| Field | Type | Description |
 | --- | --- | --- |
-| header | Object | 헤더 영역 |
-| header.isSuccessful | Boolean | 성공 여부 |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| results | List | 대응 현황 목록 |
-| results[0].detectDate | DateTime | 탐지 일시 |
-| results[0].isAttack | String | 정오탐 |
-| results[0].ticketStatus | String | 처리 상태 |
-| results[0].attackType | String | 공격 유형 |
-| results[0].srcIp | String | 출발지 IP |
-| results[0].ticketId | String | 대응 티켓 식별자 |
-| results[0].dstIp | String | 도착지 IP |
-| results[0].ticketType | String | 티켓 유형 |
-| results[0].tickentName | String | 티켓명 |
-| count | Integer | 대응 목록 총 개수 |
-| previous | String | 이전 페이지 링크 URL |
-| next | String | 다음 페이지 링크 URL |
+| header | Object | Header area |
+| header.isSuccessful | Boolean | Success |
+| header.resultCode | Integer | Result code |
+| header.resultMessage | String | Result message |
+| results | List | Response status list |
+| results[0].detectDate | DateTime | Detection date |
+| results[0].isAttack | String | True/False Positive |
+| results[0].ticketStatus | String | Processing status |
+| results[0].attackType | String | Attack type |
+| results[0].srcIp | String | Departure IP |
+| results[0].ticketId | String | Response ticket identifier |
+| results[0].dstIp | String | Destination IP |
+| results[0].ticketType | String | Ticket type |
+| results[0].tickentName | String | Ticket name |
+| count | Integer | Total number of response list |
+| previous | String | URL link to previous page |
+| next | String | URL link to next page |
 
-### 대응 현황 상세 정보
+### Detailed information on response status
 
-#### 요청
+#### Request
 
 [URI]
 
-| 메서드 | URI |
+| Method | URI |
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/tickets/{ticketId} |
 
-[예]
+[Example]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/tickets/{ticketId}" \
  -H "Content-Type: application/json"
 ```
 
-#### 응답
+#### Response
 
-[응답 본문]
+[Response body]
 
 ``` json
 {
@@ -620,9 +620,9 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
     },
     "data": {
         "result": [
-            "TEST 티켓 처리 완료",
-            "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" class=\"__se_tbl\" style=\"width:1400px\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">이름</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">종료시간</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">위험도</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">공격자 주소</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">공격자 포트</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">공격자 국가</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">목적지 주소</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">목적지 포트</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">목적지 국가</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">탐지방향</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">탐지패턴</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">공격횟수</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">UDS_Appkey_PIOLINK</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">2018-08-21 12:07:59</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Low</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">211.58.124.208</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">50741</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Korea, Republic of</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">133.186.242.15</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">80</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Japan</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Inbound</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">1</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"12\" style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Total : 1</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n",
-            "<p>정탐 심화분석 TEST</p>\r\n"
+            "Test ticket processing completed",
+             "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" class=\"__se_tbl\" style=\"width:1400px\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Name</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">End Time</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Risk Level</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Attacker Address</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Attacker Port</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Attacker Country</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Destination Address</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Destination Port</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Destination Country</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Detection Direction</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Detection Pattern</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Number of Attack</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">UDS_Appkey_PIOLINK</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">2018-08-21 12:07:59</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Low</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">211.58.124.208</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">50741</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Korea, Republic of</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">133.186.242.15</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">80</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Japan</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Inbound</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">1</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"12\" style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Total : 1</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n",
+            "<p>Deep True Positive Analysis</p>\r\n”
         ],
         "desc": [
             "",
@@ -632,46 +632,46 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 }
 ```
 
-[필드]
+[Field]
 
-| 필드 | 타입 | 설명 |
+| Field | Type | Description |
 | --- | --- | --- |
-| header | Object | 헤더 영역 |
-| header.isSuccessful | Boolean | 성공 여부 |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| results | List | 대응 현황 상세 정보 목록 |
-| results[0] | String | 공격 요약 |
-| results[1] | String | 분석 결과 HTML 데이터 |
-| results[2] | String | 심화 분석 |
-| desc | List | 티켓 상세 정보 목록 |
-| desc[0] | String | 티켓명 |
-| desc[1] | String | 티켓 설명 |
+| header | Object | Header area |
+| header.isSuccessful | Boolean | Success |
+| header.resultCode | Integer | Result code |
+| header.resultMessage | String | Result message |
+| results | List | List of detailed information on response status |
+| results[0] | String | Attack summary |
+| results[1] | String | HTML data of analysis result |
+| results[2] | String | Deep analysis |
+| desc | List | List of detailed information on ticket |
+| desc[0] | String | Ticket name |
+| desc[1] | String | Ticket description |
 
-### 상세 이벤트 현황
+### Detailed event status
 
-#### 요청
+#### Request
 
 [URI]
 
-| 메서드 | URI |
+| Method | URI |
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/events |
 
-[예]
+[Example]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/events?page=1&startDate=2021-07-01%2000:00&endDate=2021-07-13%2023:59" \
  -H "Content-Type: application/json"
 ```
 
-[파라미터]
+[Parameter]
 
-| 이름 | 타입 | 필수 여부 | 기본값 | 유효 범위 | 설명 |
+| Name | Type | Necessity | Default | Valid range | Description |
 | --- | --- | --- | --- | --- | --- |
-| page | Integer | 선택 | 1 |  | 조회할 페이지 |
-| startDate | Datetime | 선택 | 하루 전 Datetime |  | 조회 시작 시간 |
-| endDate | Datetime | 선택 | 현재 Datetime |  | 조회 종료 시간 |
+| page | Integer | Optional | 1 |  | Page to search |
+| startDate | Datetime | Optional | Datetime before a day |  | Search Start time |
+| endDate | Datetime | Optional | Current Datetime |  | End time |
 
 ``` json
 {
@@ -699,24 +699,24 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ev
 }
 ```
 
-[필드]
+[Field]
 
-| 필드 | 타입 | 설명 |
+| Field | Type | Description |
 | --- | --- | --- |
-| header | Object | 헤더 영역 |
-| header.isSuccessful | Boolean | 성공 여부 |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| results | List | 상세 이벤트 현황 목록 |
-| results[0].detectDate | DateTime | 탐지 일시 |
-| results[0].severityLevel | String | 이벤트 위험도 |
-| results[0].dstIp | String | 목적지 IP |
-| results[0].dstCountryCode | String | 목적지 국가 코드 |
-| results[0].attackName | String | 이벤트명 |
-| results[0].srcIp | String | 출발지 IP |
-| results[0].dstPort | Integer | 목적지 포트 |
-| results[0].srcPort | Integer | 출발지 포트 |
-| results[0].inOut | String | 통신 방향 |
-| count | Integer | 대응 목록 총 개수 |
-| previous | String | 이전 페이지 링크 URL |
-| next | String | 다음 페이지 링크 URL |
+| header | Object | Header area |
+| header.isSuccessful | Boolean | Success |
+| header.resultCode | Integer | Result code |
+| header.resultMessage | String | Result message |
+| results | List | List of detailed event status |
+| results[0].detectDate | DateTime | Detection date |
+| results[0].severityLevel | String | Event risk level |
+| results[0].dstIp | String | Destination IP |
+| results[0].dstCountryCode | String | Destination country code |
+| results[0].attackName | String | Event name |
+| results[0].srcIp | String | Departure IP |
+| results[0].dstPort | Integer | Destination port |
+| results[0].srcPort | Integer | Departure port |
+| results[0].inOut | String | Communication direction |
+| count | Integer | Total number of response list |
+| previous | String | URL link to previous page |
+| next | String | URL link to next page |
