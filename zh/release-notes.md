@@ -1,5 +1,11 @@
 ## Security > Security Monitoring > Release Notes
 
+### 2021. 07. 27.
+
+#### More Features
+* [API] Open API provided
+
+
 ### Sept. 24, 2019
 
 #### Feature Updates
