@@ -1,6 +1,6 @@
 ## Security > Security Monitoring > Overview
 
-Security Monitoring, based on accumulated and verified IDS/SIEM patterns and risk management response system of NHN, provides 24/7 high-level security surveillance service by professional engineers.  
+Security Monitoring, based on accumulated and verified IDS/SIEM patterns and risk management response system of NHN Cloud, provides 24/7 high-level security surveillance service by professional engineers.  
 
 ## Benefits 
 
@@ -17,7 +17,7 @@ Security Monitoring, based on accumulated and verified IDS/SIEM patterns and ris
 - Helps to resolve difficulties in securing security staff from within.
 
 ### Distinctive Next-Generation Remote Security Service 
-- Proves to be excellent in detection of attacks through powerful IDS/SIEM detection patterns which are verified throughout years of operation in NHN.
+- Proves to be excellent in detection of attacks through powerful IDS/SIEM detection patterns which are verified throughout years of operation in NHN Cloud.
 - Provides distinctive security monitoring service, by the combination of scenario-based SIEM detection pattern, not by simple pattern matching. 
 - Executes influence-verifying test in consideration of raw data and services for all threat attempts.
 - Notifies for vulnerabilities and suspicious acts, by influence verification and in-depth analysis in packet dumps, which are more than simple event notifications.
