@@ -4,7 +4,7 @@
 
 | リージョン | ドメイン |
 | --- | --- |
-| 韓国(パンギョ、坪村)リージョン | https://kr1-secmon.api.nhncloudservice.com |
+| 韓国(パンギョ、ピョンチョン)リージョン | https://kr1-secmon.api.nhncloudservice.com |
 
 ## 監視登録API
 
@@ -22,7 +22,7 @@
 
 | 名前 | タイプ | 必須かどうか | デフォルト値 | 有効範囲 | 説明 |
 | --- | --- | --- | --- | --- | --- |
-| regionCode | String | 任意 | KR1 | KR1/KR2 | インスタンスを照会するリージョン情報<br>(KR1：パンギョリージョン、 KR2：坪村リージョン) |
+| regionCode | String | 任意 | KR1 | KR1/KR2 | インスタンスを照会するリージョン情報<br>(KR1：パンギョリージョン、 KR2：ピョンチョンリージョン) |
 
 [例]
 
@@ -114,7 +114,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/no
 
 | 名前 | タイプ | 必須かどうか | デフォルト値 | 有効範囲 | 説明 |
 | --- | --- | --- | --- | --- | --- |
-| regionCode | String | 任意 | KR1 | KR1/KR2 | インスタンスを照会するリージョン情報<br>(KR1：パンギョリージョン、 KR2：坪村リージョン) |
+| regionCode | String | 任意 | KR1 | KR1/KR2 | インスタンスを照会するリージョン情報<br>(KR1：パンギョリージョン、 KR2：ピョンチョンリージョン) |
 
 [例]
 
@@ -206,7 +206,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 
 | 名前 | タイプ | 必須かどうか | デフォルト値 | 有効範囲 | 説明 |
 | --- | --- | --- | --- | --- | --- |
-| regionCode | String | 任意 | KR1 | KR1/KR2 | インスタンスを照会するリージョン情報<br>(KR1：パンギョリージョン、 KR2：坪村リージョン) |
+| regionCode | String | 任意 | KR1 | KR1/KR2 | インスタンスを照会するリージョン情報<br>(KR1：パンギョリージョン、 KR2：ピョンチョンリージョン) |
 
 [リクエスト本文]
 
@@ -291,7 +291,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 | 名前 | タイプ | 必須かどうか | デフォルト値 | 有効範囲 | 説明 |
 | --- | --- | --- | --- | --- | --- |
 | vmId | String | 必須 |  |  | 監視解除するvmのIDを`,`でつなげた値 |
-| regionCode | String | 任意 | KR1 | KR1/KR2 | インスタンスのリージョン情報<br>(KR1：パンギョリージョン、 KR2：坪村リージョン) |
+| regionCode | String | 任意 | KR1 | KR1/KR2 | インスタンスのリージョン情報<br>(KR1：パンギョリージョン、 KR2：ピョンチョンリージョン) |
 
 [例]
 
