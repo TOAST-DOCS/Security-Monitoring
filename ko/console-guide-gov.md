@@ -17,7 +17,7 @@ Security Monitoring 서비스를 사용하려면 **NHN Cloud (공공기관용) C
 ## 보안관제 업무 수신 설정
 보안관제 서비스 중 발생하는 이벤트에 대해 수신 설정을 할 수 있습니다.
 
-![securitymonitoring_console_guide_gov_210628.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_gov_220719.png)
+![securitymonitoring_console_guide_gov_210628.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_220719.png)
 
 ### 긴급 건 유선 연락 허용
 
