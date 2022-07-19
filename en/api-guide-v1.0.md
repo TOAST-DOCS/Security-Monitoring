@@ -37,7 +37,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/no
 ``` json
 {
     "header": {
-        "resultCode": "1",
+        "resultCode": 1,
         "resultMessage": "Request success",
         "isSuccessful": true
     },
@@ -129,7 +129,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 ``` json
 {
     "header": {
-        "resultCode": "1",
+        "resultCode": 1,
         "resultMessage": "Request success",
         "isSuccessful": true
     },
@@ -268,7 +268,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 ``` json
 {
     "header": {
-        "resultCode": "1",
+        "resultCode": 1,
         "resultMessage": "Request success",
         "isSuccessful": true
     }
@@ -307,7 +307,7 @@ curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}
 ``` json
 {
     "header": {
-        "resultCode": "1",
+        "resultCode": 1,
         "resultMessage": "Request success",
         "isSuccessful": true
     }
@@ -345,7 +345,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/hi
 {
     "count": 20,
     "header": {
-        "resultCode": "1",
+        "resultCode": 1,
         "resultMessage": "Request success",
         "isSuccessful": true
     },
@@ -433,7 +433,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 {
     "count": 2,
     "header": {
-        "resultCode": "1",
+        "resultCode": 1,
         "resultMessage": "Request success",
         "isSuccessful": true
     },
@@ -512,7 +512,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 ``` json
 {
     "header": {
-        "resultCode": "1",
+        "resultCode": 1,
         "resultMessage": "Service Result",
         "isSuccessful": true
     },
@@ -559,7 +559,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 [Example]
 
 ```
-curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/events?page=1&startDate=2021-07-01%2000:00&endDate=2021-07-13%2023:59" \
+curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/events?page=1&startDate=2021-07-01T20:00:00&endDate=2021-07-13T20:23:59" \
  -H "Content-Type: application/json"
 ```
 
@@ -575,7 +575,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ev
 {
     "count": 1,
     "header": {
-        "resultCode": "1",
+        "resultCode": 1,
         "resultMessage": "Request success",
         "isSuccessful": true
     },
