@@ -17,7 +17,7 @@ Security Monitoringサービスを使用するには、**NHN Cloud Console**に�
 ## セキュリティー監視業務の受信設定
 セキュリティー監視サービス中に発生するイベントに対して受信設定ができます。
 
-![securitymonitoring_console_guide_jp_210625.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_220719.png)
+![securitymonitoring_console_guide_jp_210625.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_jp_220719.png)
 
 ### 緊急電話連絡の許可
 
@@ -44,10 +44,10 @@ Security Monitoringサービスを使用するには、**NHN Cloud Console**に�
 - **監視状況**</span>タブでセキュリティ監視サービスを申請したインスタンスのセキュリティ監視対応状況を確認できます。 
   - セキュリティ監視対応リストは過去1年のデータのみ検索できます。
 
-![securitymonitoring_console_guide_jp_210629_1.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_220719_1.png)
+![securitymonitoring_console_guide_jp_210629_1.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_jp_220719_1.png)
 
 ## 詳細イベント状況確認
 - **詳細イベント状況** </span> タブでセキュリティ監視サービスを申請したインスタンスの詳細イベント状況を確認できます。 
   - 詳細イベントリストは過去3ヶ月のデータのみ検索できます。
 
-![securitymonitoring_console_guide_jp_210625_2.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_220719_2.png)
+![securitymonitoring_console_guide_jp_210625_2.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_jp_220719_2.png)
