@@ -18,7 +18,7 @@ To apply for Security Monitoring, login to **NHN Cloud Console**, and click to e
 ## Receiving Information for Security Monitoring Events 
 You can receive information for security monitoring events while the service is enabled. 
 
-![securitymonitoring_console_guide_en_210625.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_en_210625.png)
+![securitymonitoring_console_guide_en_210625.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_en_220719.png)
 
 ### Enable Phone Communication for Urgency 
 
@@ -42,11 +42,11 @@ Delimit by ; to enter many accounts.
 You can check the security control response status for the instance that you asked for security control service in the **Control Status** </span>   tab. 
 - Only data for the last 1 year can be searched from the security control response list.  
 
-![securitymonitoring_console_guide_en_210625_1.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_en_210625_1.png)
+![securitymonitoring_console_guide_en_210625_1.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_en_220719_1.png)
 
 ## Check detailed event status
 
 You can check the detailed event status for the instance that you asked for security control service in the - **Detailed event status** </span>   tab. 
 - Only data for the past 3 months can be searched from the detailed event list.
 
-![securitymonitoring_console_guide_en_210625_2.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_en_210625_2.png)
+![securitymonitoring_console_guide_en_210625_2.png](http://static.toastoven.net/prod_mss/securitymonitoring_console_guide_en_220719_2.png)
