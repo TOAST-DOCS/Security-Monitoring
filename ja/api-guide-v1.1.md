@@ -1,34 +1,34 @@
-## Security > Security Monitoring > API 가이드
+## Security > Security Monitoring > APIガイド
 
-[API 도메인]
+[APIドメイン]
 
-| 리전 | 도메인 |
+| リージョン | ドメイン |
 | --- | --- |
-| 한국(판교) 리전 | https://kr1-secmon.api.nhncloudservice.com |
-| 한국(평촌) 리전 | https://kr2-secmon.api.nhncloudservice.com |
+| 韓国(パンギョ)リージョン | https://kr1-secmon.api.nhncloudservice.com |
+| 韓国(ピョンチョン)リージョン | https://kr2-secmon.api.nhncloudservice.com |
 
-## 관제 등록 API
+## 監視登録API
 
-### 관제 미신청 목록 조회
+### 監視 未申請リスト照会
 
-#### 요청
+#### リクエスト
 
 [URI]
 
-| 메서드 | URI |
+| メソッド | URI |
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/not-applied-vms |
 
-[예]
+[例]
 
 ```/Users/nhn/Downloads/api-guide-v1.0 (1).md
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/not-applied-vms" \
  -H "Content-Type: application/json"
 ```
 
-#### 응답
+#### レスポンス
 
-[응답 본문]
+[レスポンス本文]
 
 ``` json
 {
@@ -67,54 +67,54 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/no
 }
 ```
 
-[필드]
+[フィールド]
 
-| 필드 | 타입 | 설명 |
+| フィールド | タイプ | 説明 |
 | --- | --- | --- |
-| header | Object | 헤더 영역 |
-| header.isSuccessful | Boolean | 성공 여부 |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| results | List | 관제 미신청 상태의 vm 목록 |
-| results[0].lbIp | String | Load Balancer의 Floating IP |
-| results[0].vm | List | Load Balancer에 연결된 VM 목록 |
-| results[0].vm[0].vmId | String | VM의 식별자 ID |
-| results[0].vm[0].fixedIp | String | VM의 Fixed IP |
-| results[0].vm[0].vmOs | String | VM의 운영체제 정보 |
-| results[0].vm[0].vmIp | String | VM의 Floating IP |
-| results[0].vm[0].serviceStatus | String | VM의 보안관제 신청 상태 |
-| results[0].vm[0].vmName | String | VM의 이름 |
-| results[0].fixedIp | String | Load Balancer의 Fixed IP |
-| results[0].lbId | String | Load Balancer의 식별자 ID |
-| results[0].lbName | String | Load Balancer의 이름 |
-| results[0].serviceStatus | String | Load Balancer의 보안관제 신청 상태 |
-| results[1].vmId | String | VM의 식별자 ID |
-| results[1].fixedIp | String | VM의 Fixed IP |
-| results[1].vmOs | String | VM의 운영체제 정보 |
-| results[1].vmIp | String | VM의 Floating IP |
-| results[1].serviceStatus | String | VM의 보안관제 신청 상태 |
-| results[1].vmName | String | VM의 이름 |
+| header | Object | ヘッダ領域 |
+| header.isSuccessful | Boolean | 成否 |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| results | List | 監視未申請状態のvmリスト |
+| results[0].lbIp | String | Load BalancerのFloating IP |
+| results[0].vm | List | Load Balancerに接続されたVMリスト |
+| results[0].vm[0].vmId | String | VMの識別子ID |
+| results[0].vm[0].fixedIp | String | VMのFixed IP |
+| results[0].vm[0].vmOs | String | VMのOS情報 |
+| results[0].vm[0].vmIp | String | VMのFloating IP |
+| results[0].vm[0].serviceStatus | String | VMのセキュリティ監視申請状態 |
+| results[0].vm[0].vmName | String | VMの名前 |
+| results[0].fixedIp | String | Load BalancerのFixed IP |
+| results[0].lbId | String | Load Balancerの識別子ID |
+| results[0].lbName | String | Load Balancerの名前 |
+| results[0].serviceStatus | String | Load Balancerのセキュリティ監視申請状態 |
+| results[1].vmId | String | VMの識別子ID |
+| results[1].fixedIp | String | VMのFixed IP |
+| results[1].vmOs | String | VMのOS情報 |
+| results[1].vmIp | String | VMのFloating IP |
+| results[1].serviceStatus | String | VMのセキュリティ監視申請状態 |
+| results[1].vmName | String | VMの名前 |
 
-### 관제 신청 목록 조회
+### 監視申請リスト照会
 
-#### 요청
+#### リクエスト
 
 [URI]
 
-| 메서드 | URI |
+| メソッド | URI |
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/applied-vms |
 
-[예]
+[例]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/applied-vms" \
  -H "Content-Type: application/json"
 ```
 
-#### 응답
+#### レスポンス
 
-[응답 본문]
+[レスポンス本文]
 
 ``` json
 {
@@ -153,46 +153,46 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 }
 ```
 
-[필드]
+[フィールド]
 
-| 필드 | 타입 | 설명 |
+| フィールド | タイプ | 説明 |
 | --- | --- | --- |
-| header | Object | 헤더 영역 |
-| header.isSuccessful | Boolean | 성공 여부 |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| results | List | 관제 신청된 상태의 vm 목록 |
-| results[0].lbIp | String | Load Balancer의 Floating IP |
-| results[0].vm | List | Load Balancer에 연결된 VM 목록 |
-| results[0].vm[0].vmId | String | VM의 식별자 ID |
-| results[0].vm[0].fixedIp | String | VM의 Fixed IP |
-| results[0].vm[0].vmOs | String | VM의 운영체제 정보 |
-| results[0].vm[0].vmIp | String | VM의 Floating IP |
-| results[0].vm[0].serviceStatus | String | VM의 보안관제 신청 상태 |
-| results[0].vm[0].vmName | String | VM의 이름 |
-| results[0].fixedIp | String | Load Balancer의 Fixed IP |
-| results[0].lbId | String | Load Balancer의 식별자 ID |
-| results[0].lbName | String | Load Balancer의 이름 |
-| results[0].serviceStatus | String | Load Balancer의 보안관제 신청 상태 |
-| results[1].vmId | String | VM의 식별자 ID |
-| results[1].fixedIp | String | VM의 Fixed IP |
-| results[1].vmOs | String | VM의 운영체제 정보 |
-| results[1].vmIp | String | VM의 Floating IP |
-| results[1].serviceStatus | String | VM의 보안관제 신청 상태 |
-| results[1].vmName | String | VM의 이름 |
+| header | Object | ヘッダ領域 |
+| header.isSuccessful | Boolean | 成否 |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| results | List | 監視申請された状態のvmリスト |
+| results[0].lbIp | String | Load BalancerのFloating IP |
+| results[0].vm | List | Load Balancerに接続されたVMリスト |
+| results[0].vm[0].vmId | String | VMの識別子ID |
+| results[0].vm[0].fixedIp | String | VMのFixed IP |
+| results[0].vm[0].vmOs | String | VMのOS情報 |
+| results[0].vm[0].vmIp | String | VMのFloating IP |
+| results[0].vm[0].serviceStatus | String | VMのセキュリティ監視申請状態 |
+| results[0].vm[0].vmName | String | VMの名前 |
+| results[0].fixedIp | String | Load BalancerのFixed IP |
+| results[0].lbId | String | Load Balancerの識別子ID |
+| results[0].lbName | String | Load Balancerの名前 |
+| results[0].serviceStatus | String | Load Balancerのセキュリティ監視申請状態 |
+| results[1].vmId | String | VMの識別子ID |
+| results[1].fixedIp | String | VMのFixed IP |
+| results[1].vmOs | String | VMのOS情報 |
+| results[1].vmIp | String | VMのFloating IP |
+| results[1].serviceStatus | String | VMのセキュリティ監視申請状態 |
+| results[1].vmName | String | VMの名前 |
 
-### 관제 추가
+### 監視追加
 
-#### 요청
+#### リクエスト
 
 [URI]
 
-| 메서드 | URI |
+| メソッド | URI |
 | --- | --- |
 | POST | /v1.0/appkeys/{appKey}/vm |
 
 
-[요청 본문]
+[リクエスト本文]
 
 ``` json
 {
@@ -223,32 +223,32 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 }
 ```
 
-[필드]
+[フィールド]
 
-| 이름 | 타입 | 필수 여부 | 기본값 | 유효 범위 | 설명 |
+| 名前 | タイプ | 必須かどうか | デフォルト値 | 有効範囲 | 説明 |
 | --- | --- | --- | --- | --- | --- |
-| vmList | List | 필수 |  |  | 관제 신청 vm 목록 |
-| vmList[0].lbIp | String | 필수 |  |  | Load Balancer의 Floating IP |
-| vmList[0].vm | List | 필수 |  |  | Load Balancer에 연결된 VM 목록 |
-| vmList[0].vm[0].vmId | String | 필수 |  |  | VM의 식별자 ID |
-| vmList[0].vm[0].fixedIp | String | 필수 |  |  | VM의 Fixed IP |
-| vmList[0].vm[0].vmOs | String | 필수 |  |  | VM의 운영체제 정보 |
-| vmList[0].vm[0].vmIp | String | 필수 |  |  | VM의 Floating IP |
-| vmList[0].vm[0].vmName | String | 필수 |  |  | VM의 이름 |
-| vmList[0].fixedIp | String | 필수 |  |  | Load Balancer의 Fixed IP |
-| vmList[0].lbId | String | 필수 |  |  | Load Balancer의 식별자 ID |
-| vmList[0].lbName | String | 필수 |  |  | Load Balancer의 이름 |
-| vmList[1].vmId | String | 필수 |  |  | VM의 식별자 ID |
-| vmList[1].fixedIp | String | 필수 |  |  | VM의 Fixed IP |
-| vmList[1].vmOs | String | 필수 |  |  | VM의 운영체제 정보 |
-| vmList[1].vmIp | String | 필수 |  |  | VM의 Floating IP |
-| vmList[1].vmName | String | 필수 |  |  | VM의 이름 |
+| vmList | List | 必須 |  |  | 監視申請vmリスト |
+| vmList[0].lbIp | String | 必須 |  |  | Load BalancerのFloating IP |
+| vmList[0].vm | List | 必須 |  |  | Load Balancerに接続されたVMリスト |
+| vmList[0].vm[0].vmId | String | 必須 |  |  | VMの識別子ID |
+| vmList[0].vm[0].fixedIp | String | 必須 |  |  | VMのFixed IP |
+| vmList[0].vm[0].vmOs | String | 必須 |  |  | VMのOS情報 |
+| vmList[0].vm[0].vmIp | String | 必須 |  |  | VMのFloating IP |
+| vmList[0].vm[0].vmName | String | 必須 |  |  | VMの名前 |
+| vmList[0].fixedIp | String | 必須 |  |  | Load BalancerのFixed IP |
+| vmList[0].lbId | String | 必須 |  |  | Load Balancerの識別子ID |
+| vmList[0].lbName | String | 必須 |  |  | Load Balancerの名前 |
+| vmList[1].vmId | String | 必須 |  |  | VMの識別子ID |
+| vmList[1].fixedIp | String | 必須 |  |  | VMのFixed IP |
+| vmList[1].vmOs | String | 必須 |  |  | VMのOS情報 |
+| vmList[1].vmIp | String | 必須 |  |  | VMのFloating IP |
+| vmList[1].vmName | String | 必須 |  |  | VMの名前 |
 
-* Load Balancer에 연결된 형태의 VM을 관제 신청하기 위해서는 vmList[0]의 데이터를 필수로 입력해야하며, Load Balancer에 연결되지 않은 VM을 관제 신청하기 위해서는 vmList[1]의 데이터를 필수로 입력하여야 합니다.
+* Load Balancerに接続された形態のVMの監視申請を行うには、vmList[0]のデータを必ず入力しなければならず、Load Balancerに接続されていないVMを監視申請するにはvmList[1]のデータを必ず入力する必要があります。
 
-#### 응답
+#### レスポンス
 
-[응답 본문]
+[レスポンス本文]
 
 ``` json
 {
@@ -260,27 +260,27 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 }
 ```
 
-### 관제 해제
+### 監視解除
 
-#### 요청
+#### リクエスト
 
 [URI]
 
-| 메서드 | URI |
+| メソッド | URI |
 | --- | --- |
 | DELETE | /v1.0/appkeys/{appKey}/vm |
 
-[예]
+[例]
 
 ```
 curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/vm?vmId=8b031032-e0a0-4b36-8a98-642b6d3ca07b,1dc707a8-a5be-431e-aca1-77c60af1fe9a" \
  -H "Content-Type: application/json"
 ```
-* Load Balancer에 연결된 형태의 VM을 관제 해제하기 위해서는 vmId 파라미터에 Load Balancer ID만을 입력하여야 합니다.
+* Load Balancerに接続された形態のVMを監視解除するにはvmIdパラメータにLoad Balancer IDだけを入力する必要があります。
 
-#### 응답
+#### レスポンス
 
-[응답 본문]
+[レスポンス本文]
 
 ``` json
 {
@@ -292,32 +292,32 @@ curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}
 }
 ```
 
-### 관제 상태 변경 이력 조회
+### 監視状態変更履歴照会
 
-#### 요청
+#### リクエスト
 
 [URI]
 
-| 메서드 | URI |
+| メソッド | URI |
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/history |
 
-[파라미터]
+[パラメータ]
 
-| 이름 | 타입 | 필수 여부 | 기본값 | 유효 범위 | 설명 |
+| 名前 | タイプ | 必須かどうか | デフォルト値 | 有効範囲 | 説明 |
 | --- | --- | --- | --- | --- | --- |
-| page | Integer | 선택 | 1 |  | 조회할 페이지 |
+| page | Integer | 任意 | 1 |  | 照会するページ |
 
-[예]
+[例]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/history?page=1" \
  -H "Content-Type: application/json"
 ```
 
-#### 응답
+#### レスポンス
 
-[응답 본문]
+[レスポンス本文]
 
 ``` json
 {
@@ -356,56 +356,56 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/hi
 }
 ```
 
-[필드]
+[フィールド]
 
-| 필드 | 타입 | 설명 |
+| フィールド | タイプ | 説明 |
 | --- | --- | --- |
-| header | Object | 헤더 영역 |
-| header.isSuccessful | Boolean | 성공 여부 |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| results | List | 관제 상태 변경 이력 목록 |
-| results[0].status | String | 관제 상태 |
-| results[0].reason | String | 관제 변경 사유 |
-| results[0].contents | String | 변경 내용 |
-| results[0].vmId | String | 변경 대상 |
-| results[0].meter | String | 과금 진행 여부 |
-| results[0].type | String | 변경 타입 |
-| results[0].regDate | Datetime | 이력 등록 일시 |
-| results[0].historyId | Integer | 이력 식별자 |
-| count | Integer | 이력 총 개수 |
-| previous | String | 이전 페이지 링크 URL |
-| next | String | 다음 페이지 링크 URL |
+| header | Object | ヘッダ領域 |
+| header.isSuccessful | Boolean | 成否 |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| results | List | 監視状態変更履歴リスト |
+| results[0].status | String | 監視状態 |
+| results[0].reason | String | 監視変更理由 |
+| results[0].contents | String | 変更内容 |
+| results[0].vmId | String | 変更対象 |
+| results[0].meter | String | 課金進行 |
+| results[0].type | String | 変更タイプ |
+| results[0].regDate | Datetime | 履歴登録日時 |
+| results[0].historyId | Integer | 履歴識別子 |
+| count | Integer | 履歴総数 |
+| previous | String | 以前ページリンクURL |
+| next | String | 次のページリンクURL |
 
 
-## 보안관제 대응 현황
+## セキュリティ監視対応状況
 
-### 대응 현황 목록 조회
+### 対応状況リスト照会
 
-#### 요청
+#### リクエスト
 
 [URI]
 
-| 메서드 | URI |
+| メソッド | URI |
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/tickets |
 
-[예]
+[例]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/tickets?page=1" \
  -H "Content-Type: application/json"
 ```
 
-[파라미터]
+[パラメータ]
 
-| 이름 | 타입 | 필수 여부 | 기본값 | 유효 범위 | 설명 |
+| 名前 | タイプ | 必須かどうか | デフォルト値 | 有効範囲 | 説明 |
 | --- | --- | --- | --- | --- | --- |
-| page | Integer | 선택 | 1 |  | 조회할 페이지 |
+| page | Integer | 任意 | 1 |  | 照会するページ |
 
-#### 응답
+#### レスポンス
 
-[응답 본문]
+[レスポンス本文]
 
 ``` json
 {
@@ -444,48 +444,49 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 }
 ```
 
-[필드]
+[フィールド]
 
-| 필드 | 타입 | 설명 |
+| フィールド | タイプ | 説明 |
 | --- | --- | --- |
-| header | Object | 헤더 영역 |
-| header.isSuccessful | Boolean | 성공 여부 |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| results | List | 대응 현황 목록 |
-| results[0].detectDate | DateTime | 탐지 일시 |
-| results[0].isAttack | String | 정오탐 |
-| results[0].ticketStatus | String | 처리 상태 |
-| results[0].attackType | String | 공격 유형 |
-| results[0].srcIp | String | 출발지 IP |
-| results[0].ticketId | String | 대응 티켓 식별자 |
-| results[0].dstIp | String | 도착지 IP |
-| results[0].ticketType | String | 티켓 유형 |
-| results[0].tickentName | String | 티켓명 |
-| count | Integer | 대응 목록 총 개수 |
-| previous | String | 이전 페이지 링크 URL |
-| next | String | 다음 페이지 링크 URL |
+| header | Object | ヘッダ領域 |
+| header.isSuccessful | Boolean | 成否 |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| results | List | 対応状況リスト |
+| results[0].detectDate | DateTime | 検知日時 |
+| results[0].isAttack | String | true alerm/false alerm |
+| results[0].ticketStatus | String | 処理状態 |
+| results[0].attackType | String | 攻撃タイプ |
+| results[0].srcIp | String | 送信元IP |
+| results[0].ticketId | String | 対応チケット識別子 |
+| results[0].dstIp | String | 到着地IP |
+| results[0].ticketType | String | チケットタイプ |
+| results[0].tickentName | String | チケット |
+| count | Integer | 対応リスト総数 |
+| previous | String | 以前ページリンクURL |
+| next | String | 次のページリンクURL |
 
-### 대응 현황 상세 정보
+### 対応状況詳細情報
 
-#### 요청
+#### リクエスト
 
 [URI]
 
-| 메서드 | URI |
+| メソッド | URI |
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/tickets/{ticketId} |
 
-[예]
+[例]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/tickets/{ticketId}" \
  -H "Content-Type: application/json"
 ```
 
-#### 응답
+#### レスポンス
 
-[응답 본문]
+[レスポンス本文]
+
 
 ``` json
 {
@@ -508,46 +509,46 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 }
 ```
 
-[필드]
+[フィールド]
 
-| 필드 | 타입 | 설명 |
+| フィールド | タイプ | 説明 |
 | --- | --- | --- |
-| header | Object | 헤더 영역 |
-| header.isSuccessful | Boolean | 성공 여부 |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| results | List | 대응 현황 상세 정보 목록 |
-| results[0] | String | 공격 요약 |
-| results[1] | String | 분석 결과 HTML 데이터 |
-| results[2] | String | 심화 분석 |
-| desc | List | 티켓 상세 정보 목록 |
-| desc[0] | String | 티켓명 |
-| desc[1] | String | 티켓 설명 |
+| header | Object | ヘッダ領域 |
+| header.isSuccessful | Boolean | 成否 |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| results | List | 対応状況詳細情報リスト |
+| results[0] | String | 攻撃要約 |
+| results[1] | String | 分析結果HTMLデータ |
+| results[2] | String | 深化分析 |
+| desc | List | チケット 詳細情報リスト |
+| desc[0] | String | チケット名 |
+| desc[1] | String | チケットの説明 |
 
-### 상세 이벤트 현황
+### 詳細イベント状況
 
-#### 요청
+#### リクエスト
 
 [URI]
 
-| 메서드 | URI |
+| メソッド | URI |
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/events |
 
-[예]
+[例]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/events?page=1&startDate=2021-07-01T20:00:00&endDate=2021-07-13T20:23:59" \
  -H "Content-Type: application/json"
 ```
 
-[파라미터]
+[パラメータ]
 
-| 이름 | 타입 | 필수 여부 | 기본값 | 유효 범위 | 설명 |
+| 名前 | タイプ | 必須かどうか | デフォルト値 | 有効範囲 | 説明 |
 | --- | --- | --- | --- | --- | --- |
-| page | Integer | 선택 | 1 |  | 조회할 페이지 |
-| startDate | Datetime | 선택 | 하루 전 Datetime |  | 조회 시작 시간 |
-| endDate | Datetime | 선택 | 현재 Datetime |  | 조회 종료 시간 |
+| page | Integer | 任意 | 1 |  | 照会するページ |
+| startDate | Datetime | 任意 | 1日前のDatetime |  | 照会開始時間 |
+| endDate | Datetime | 任意 | 現在Datetime |  | 照会終了時間 |
 
 ``` json
 {
@@ -575,24 +576,24 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ev
 }
 ```
 
-[필드]
+[フィールド]
 
-| 필드 | 타입 | 설명 |
+| フィールド | タイプ | 説明 |
 | --- | --- | --- |
-| header | Object | 헤더 영역 |
-| header.isSuccessful | Boolean | 성공 여부 |
-| header.resultCode | Integer | 결과 코드 |
-| header.resultMessage | String | 결과 메시지 |
-| results | List | 상세 이벤트 현황 목록 |
-| results[0].detectDate | DateTime | 탐지 일시 |
-| results[0].severityLevel | String | 이벤트 위험도 |
-| results[0].dstIp | String | 목적지 IP |
-| results[0].dstCountryCode | String | 목적지 국가 코드 |
-| results[0].attackName | String | 이벤트명 |
-| results[0].srcIp | String | 출발지 IP |
-| results[0].dstPort | Integer | 목적지 포트 |
-| results[0].srcPort | Integer | 출발지 포트 |
-| results[0].inOut | String | 통신 방향 |
-| count | Integer | 대응 목록 총 개수 |
-| previous | String | 이전 페이지 링크 URL |
-| next | String | 다음 페이지 링크 URL |
+| header | Object | ヘッダ領域 |
+| header.isSuccessful | Boolean | 成否 |
+| header.resultCode | Integer | 結果コード |
+| header.resultMessage | String | 結果メッセージ |
+| results | List | 詳細イベント状況リスト |
+| results[0].detectDate | DateTime | 検知日時 |
+| results[0].severityLevel | String | イベントの危険度 |
+| results[0].dstIp | String | 宛先IP |
+| results[0].dstCountryCode | String | 宛先国コード |
+| results[0].attackName | String | イベント名 |
+| results[0].srcIp | String | 送信元IP |
+| results[0].dstPort | Integer | 宛先ポート |
+| results[0].srcPort | Integer | 送信元ポート |
+| results[0].inOut | String | 通信方向 |
+| count | Integer | 対応リスト総数 |
+| previous | String | 以前ページリンクURL |
+| next | String | 次のページリンクURL |
