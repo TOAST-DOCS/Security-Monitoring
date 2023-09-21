@@ -191,8 +191,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 | --- | --- |
 | POST | /v1.0/appkeys/{appKey}/vm |
 
-
-[요청 본문]
+[Request body]
 
 ``` json
 {
