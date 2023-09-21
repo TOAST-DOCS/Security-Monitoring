@@ -21,7 +21,7 @@
 
 [例]
 
-```/Users/nhn/Downloads/api-guide-v1.0 (1).md
+```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/not-applied-vms" \
  -H "Content-Type: application/json"
 ```
