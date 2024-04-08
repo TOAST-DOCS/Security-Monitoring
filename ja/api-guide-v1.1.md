@@ -6,6 +6,8 @@
 | --- | --- |
 | 韓国(パンギョ)リージョン | https://kr1-secmon.api.nhncloudservice.com |
 | 韓国(ピョンチョン)リージョン | https://kr2-secmon.api.nhncloudservice.com |
+| 韓国(光州)リージョン | https://kr3-secmon.api.nhncloudservice.com |
+
 
 ## 監視登録API
 
