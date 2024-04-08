@@ -6,6 +6,8 @@
 | --- | --- |
 | Korea (Pangyo) region | https://kr1-secmon.api.nhncloudservice.com |
 | Korea (Pyeongchon) region | https://kr2-secmon.api.nhncloudservice.com |
+| Korea (Gwangju) region | https://kr3-secmon.api.nhncloudservice.com |
+
 
 ## Control registration API
 
