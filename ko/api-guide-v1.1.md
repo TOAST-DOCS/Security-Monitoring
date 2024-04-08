@@ -6,6 +6,7 @@
 | --- | --- |
 | 한국(판교) 리전 | https://kr1-secmon.api.nhncloudservice.com |
 | 한국(평촌) 리전 | https://kr2-secmon.api.nhncloudservice.com |
+| 한국(광주) 리전 | https://kr3-secmon.api.nhncloudservice.com |
 
 ## 관제 등록 API
 
