@@ -404,6 +404,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 | 名前 | タイプ | 必須かどうか | デフォルト値 | 有効範囲 | 説明 |
 | --- | --- | --- | --- | --- | --- |
 | page | Integer | 任意 | 1 |  | 照会するページ |
+| detectDateOrder | String | 任意 | asc | asc/desc | detectDate 基準ソート方向 |
 
 #### レスポンス
 
