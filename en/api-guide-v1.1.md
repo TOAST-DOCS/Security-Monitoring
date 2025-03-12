@@ -403,6 +403,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 | Name | Type | Necessity | Default | Valid range | Description |
 | --- | --- | --- | --- | --- | --- |
 | page | Integer | Optional | 1 |  | Page to search |
+| detectDateOrder | String | Optional | asc | asc/desc | Sort direction based on detectDate |
 
 #### Response
 
