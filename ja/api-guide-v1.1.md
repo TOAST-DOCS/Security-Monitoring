@@ -8,6 +8,13 @@
 | 韓国(ピョンチョン)リージョン | https://kr2-secmon.api.nhncloudservice.com |
 | 韓国(光州)リージョン | https://kr3-secmon.api.nhncloudservice.com |
 
+## Access Token
+
+* [https://docs.nhncloud.com/ko/nhncloud/ko/public-api/api-authentication/](https://docs.nhncloud.com/ko/nhncloud/ko/public-api/api-authentication/) 참고해서 Access Token 을 발급 받는다.
+* API 요청 헤더에 발급받은 토큰을 추가하여 요청한다.
+* 주의 
+    * Token 발급 유저는 요청할 Appkey 가 속한 프로젝트에 Security Monitoring Admin 권한을 가지고 있어야 한다. 
+
 ## 監視登録API
 
 ### 監視 未申請リスト照会
@@ -20,11 +27,18 @@
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/not-applied-vms |
 
+[요청 헤더]
+
+| 이름 | 형식 | 필수 | 설명 |
+| --- | --- | --- | --- |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+
 [例]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/not-applied-vms" \
- -H "Content-Type: application/json"
+ -H "Content-Type: application/json" \
+ -H "x-nhn-authorization: {access_token}"
 ```
 
 #### レスポンス
@@ -106,11 +120,18 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/no
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/applied-vms |
 
+[요청 헤더]
+
+| 이름 | 형식 | 필수 | 설명 |
+| --- | --- | --- | --- |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+
 [例]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/applied-vms" \
- -H "Content-Type: application/json"
+ -H "Content-Type: application/json" \
+ -H "x-nhn-authorization: {access_token}"
 ```
 
 #### レスポンス
@@ -192,6 +213,11 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 | --- | --- |
 | POST | /v1.0/appkeys/{appKey}/vm |
 
+[요청 헤더]
+
+| 이름 | 형식 | 필수 | 설명 |
+| --- | --- | --- | --- |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
 
 [リクエスト本文]
 
@@ -271,11 +297,18 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 | --- | --- |
 | DELETE | /v1.0/appkeys/{appKey}/vm |
 
+[요청 헤더]
+
+| 이름 | 형식 | 필수 | 설명 |
+| --- | --- | --- | --- |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+
 [例]
 
 ```
 curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/vm?vmId=8b031032-e0a0-4b36-8a98-642b6d3ca07b,1dc707a8-a5be-431e-aca1-77c60af1fe9a" \
- -H "Content-Type: application/json"
+ -H "Content-Type: application/json" \
+ -H "x-nhn-authorization: {access_token}"
 ```
 * Load Balancerに接続された形態のVMを監視解除するにはvmIdパラメータにLoad Balancer IDだけを入力する必要があります。
 
@@ -303,6 +336,12 @@ curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/history |
 
+[요청 헤더]
+
+| 이름 | 형식 | 필수 | 설명 |
+| --- | --- | --- | --- |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+
 [パラメータ]
 
 | 名前 | タイプ | 必須かどうか | デフォルト値 | 有効範囲 | 説明 |
@@ -313,7 +352,8 @@ curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/history?page=1" \
- -H "Content-Type: application/json"
+ -H "Content-Type: application/json" \
+ -H "x-nhn-authorization: {access_token}"
 ```
 
 #### レスポンス
@@ -391,11 +431,18 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/hi
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/tickets |
 
+[요청 헤더]
+
+| 이름 | 형식 | 필수 | 설명 |
+| --- | --- | --- | --- |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+
 [例]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/tickets?page=1" \
- -H "Content-Type: application/json"
+ -H "Content-Type: application/json" \
+ -H "x-nhn-authorization: {access_token}"
 ```
 
 [パラメータ]
@@ -478,11 +525,18 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/tickets/{ticketId} |
 
+[요청 헤더]
+
+| 이름 | 형식 | 필수 | 설명 |
+| --- | --- | --- | --- |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+
 [例]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/tickets/{ticketId}" \
- -H "Content-Type: application/json"
+ -H "Content-Type: application/json" \
+ -H "x-nhn-authorization: {access_token}"
 ```
 
 #### レスポンス
@@ -537,11 +591,18 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/events |
 
+[요청 헤더]
+
+| 이름 | 형식 | 필수 | 설명 |
+| --- | --- | --- | --- |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+
 [例]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/events?page=1&startDate=2021-07-01T20:00:00&endDate=2021-07-13T20:23:59" \
- -H "Content-Type: application/json"
+ -H "Content-Type: application/json" \
+ -H "x-nhn-authorization: {access_token}"
 ```
 
 [パラメータ]
