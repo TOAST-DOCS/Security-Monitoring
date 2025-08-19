@@ -15,8 +15,6 @@
 * 주의 
     * Token 발급 유저는 요청할 Appkey 가 속한 프로젝트에 Security Monitoring Admin 권한을 가지고 있어야 한다. 
 
-<br>
-
 ## 관제 등록 API
 
 ### 관제 미신청 목록 조회
