@@ -8,7 +8,7 @@
 ### Sept. 26, 2023
 
 #### Feature Updates
-* Changes in the API Guide
+* Changes in the [API] Guide
 
 ### July 27, 2021
 
