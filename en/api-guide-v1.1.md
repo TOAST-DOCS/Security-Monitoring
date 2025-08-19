@@ -27,7 +27,7 @@
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/not-applied-vms |
 
-[요청 헤더]
+[Request header]
 
 | 이름 | 형식 | 필수 | 설명 |
 | --- | --- | --- | --- |
@@ -120,7 +120,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/no
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/applied-vms |
 
-[요청 헤더]
+[Request header]
 
 | 이름 | 형식 | 필수 | 설명 |
 | --- | --- | --- | --- |
@@ -213,7 +213,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 | --- | --- |
 | POST | /v1.0/appkeys/{appKey}/vm |
 
-[요청 헤더]
+[Request header]
 
 | 이름 | 형식 | 필수 | 설명 |
 | --- | --- | --- | --- |
@@ -297,7 +297,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 | --- | --- |
 | DELETE | /v1.0/appkeys/{appKey}/vm |
 
-[요청 헤더]
+[Request header]
 
 | 이름 | 형식 | 필수 | 설명 |
 | --- | --- | --- | --- |
@@ -336,7 +336,7 @@ curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/history |
 
-[요청 헤더]
+[Request header]
 
 | 이름 | 형식 | 필수 | 설명 |
 | --- | --- | --- | --- |
@@ -431,7 +431,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/hi
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/tickets |
 
-[요청 헤더]
+[Request header]
 
 | 이름 | 형식 | 필수 | 설명 |
 | --- | --- | --- | --- |
@@ -525,7 +525,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/tickets/{ticketId} |
 
-[요청 헤더]
+[Request header]
 
 | 이름 | 형식 | 필수 | 설명 |
 | --- | --- | --- | --- |
@@ -590,7 +590,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/events |
 
-[요청 헤더]
+[Request header]
 
 | 이름 | 형식 | 필수 | 설명 |
 | --- | --- | --- | --- |
