@@ -8,6 +8,15 @@
 | 한국(평촌) 리전 | https://kr2-secmon.api.nhncloudservice.com |
 | 한국(광주) 리전 | https://kr3-secmon.api.nhncloudservice.com |
 
+## Access Token
+
+* [https://docs.nhncloud.com/ko/nhncloud/ko/public-api/api-authentication/](https://docs.nhncloud.com/ko/nhncloud/ko/public-api/api-authentication/) 참고해서 Access Token 을 발급 받는다.
+* API 요청 헤더에 발급받은 토큰을 추가하여 요청한다.
+* 주의 
+    * Token 발급 유저는 요청할 Appkey 가 속한 프로젝트에 Security Monitoring Admin 권한을 가지고 있어야 한다. 
+
+<br>
+
 ## 관제 등록 API
 
 ### 관제 미신청 목록 조회
@@ -20,18 +29,25 @@
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/not-applied-vms |
 
+[요청 헤더]
+
+| 이름 | 형식 | 필수 | 설명 |
+| --- | --- | --- | --- |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+
 [예]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/not-applied-vms" \
- -H "Content-Type: application/json"
+ -H "Content-Type: application/json" \
+ -H "x-nhn-authorization: {access_token}"
 ```
 
 #### 응답
 
 [응답 본문]
 
-``` json
+```json
 {
     "header": {
         "resultCode": 1,
@@ -106,18 +122,25 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/no
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/applied-vms |
 
+[요청 헤더]
+
+| 이름 | 형식 | 필수 | 설명 |
+| --- | --- | --- | --- |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+
 [예]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/applied-vms" \
- -H "Content-Type: application/json"
+ -H "Content-Type: application/json" \
+ -H "x-nhn-authorization: {access_token}"
 ```
 
 #### 응답
 
 [응답 본문]
 
-``` json
+```json
 {
     "header": {
         "resultCode": 1,
@@ -192,10 +215,15 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 | --- | --- |
 | POST | /v1.0/appkeys/{appKey}/vm |
 
+[요청 헤더]
+
+| 이름 | 형식 | 필수 | 설명 |
+| --- | --- | --- | --- |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
 
 [요청 본문]
 
-``` json
+```json
 {
   "vmList": [
     {
@@ -227,7 +255,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 [필드]
 
 | 이름 | 타입 | 필수 여부 | 기본값 | 유효 범위 | 설명 |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | ----- | --- | ----- | --- |
 | vmList | List | 필수 |  |  | 관제 신청 vm 목록 |
 | vmList[0].lbIp | String | 필수 |  |  | Load Balancer의 Floating IP |
 | vmList[0].vm | List | 필수 |  |  | Load Balancer에 연결된 VM 목록 |
@@ -251,7 +279,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 
 [응답 본문]
 
-``` json
+```json
 {
     "header": {
         "resultCode": 1,
@@ -271,19 +299,26 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 | --- | --- |
 | DELETE | /v1.0/appkeys/{appKey}/vm |
 
+[요청 헤더]
+
+| 이름 | 형식 | 필수 | 설명 |
+| --- | --- | --- | --- |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+
 [예]
 
 ```
 curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/vm?vmId=8b031032-e0a0-4b36-8a98-642b6d3ca07b,1dc707a8-a5be-431e-aca1-77c60af1fe9a" \
  -H "Content-Type: application/json"
 ```
+
 * Load Balancer에 연결된 형태의 VM을 관제 해제하기 위해서는 vmId 파라미터에 Load Balancer ID만을 입력하여야 합니다.
 
 #### 응답
 
 [응답 본문]
 
-``` json
+```json
 {
     "header": {
         "resultCode": 1,
@@ -303,24 +338,31 @@ curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/history |
 
+[요청 헤더]
+
+| 이름 | 형식 | 필수 | 설명 |
+| --- | --- | --- | --- |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+
 [파라미터]
 
 | 이름 | 타입 | 필수 여부 | 기본값 | 유효 범위 | 설명 |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | ----- | --- | ----- | --- |
 | page | Integer | 선택 | 1 |  | 조회할 페이지 |
 
 [예]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/history?page=1" \
- -H "Content-Type: application/json"
+ -H "Content-Type: application/json" \
+ -H "x-nhn-authorization: {access_token}"
 ```
 
 #### 응답
 
 [응답 본문]
 
-``` json
+```json
 {
     "count": 20,
     "header": {
@@ -378,7 +420,6 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/hi
 | previous | String | 이전 페이지 링크 URL |
 | next | String | 다음 페이지 링크 URL |
 
-
 ## 보안관제 대응 현황
 
 ### 대응 현황 목록 조회
@@ -391,17 +432,24 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/hi
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/tickets |
 
+[요청 헤더]
+
+| 이름 | 형식 | 필수 | 설명 |
+| --- | --- | --- | --- |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+
 [예]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/tickets?page=1" \
- -H "Content-Type: application/json"
+ -H "Content-Type: application/json" \
+ -H "x-nhn-authorization: {access_token}"
 ```
 
 [파라미터]
 
 | 이름 | 타입 | 필수 여부 | 기본값 | 유효 범위 | 설명 |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | ----- | --- | ----- | --- |
 | page | Integer | 선택 | 1 |  | 조회할 페이지 |
 | detectDateOrder | String | 선택 | asc | asc/desc | detectDate 기준 정렬 방향 |
 
@@ -409,7 +457,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 
 [응답 본문]
 
-``` json
+```json
 {
     "count": 2,
     "header": {
@@ -478,18 +526,25 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/tickets/{ticketId} |
 
+[요청 헤더]
+
+| 이름 | 형식 | 필수 | 설명 |
+| --- | --- | --- | --- |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+
 [예]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/tickets/{ticketId}" \
- -H "Content-Type: application/json"
+ -H "Content-Type: application/json" \
+ -H "x-nhn-authorization: {access_token}"
 ```
 
 #### 응답
 
 [응답 본문]
 
-``` json
+```json
 {
     "header": {
         "resultCode": 1,
@@ -536,22 +591,29 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/events |
 
+[요청 헤더]
+
+| 이름 | 형식 | 필수 | 설명 |
+| --- | --- | --- | --- |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+
 [예]
 
 ```
 curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/events?page=1&startDate=2021-07-01T20:00:00&endDate=2021-07-13T20:23:59" \
- -H "Content-Type: application/json"
+ -H "Content-Type: application/json" \
+ -H "x-nhn-authorization: {access_token}"
 ```
 
 [파라미터]
 
 | 이름 | 타입 | 필수 여부 | 기본값 | 유효 범위 | 설명 |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | ----- | --- | ----- | --- |
 | page | Integer | 선택 | 1 |  | 조회할 페이지 |
 | startDate | Datetime | 선택 | 하루 전 Datetime |  | 조회 시작 시간 |
 | endDate | Datetime | 선택 | 현재 Datetime |  | 조회 종료 시간 |
 
-``` json
+```json
 {
     "count": 1,
     "header": {
