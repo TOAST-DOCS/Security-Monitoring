@@ -307,7 +307,8 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 
 ```
 curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/vm?vmId=8b031032-e0a0-4b36-8a98-642b6d3ca07b,1dc707a8-a5be-431e-aca1-77c60af1fe9a" \
- -H "Content-Type: application/json"
+ -H "Content-Type: application/json" \
+ -H "x-nhn-authorization: {access_token}"
 ```
 * To remove the control of VM which is connected to the Load Balancer, only Load Balancer ID must be entered in the vmId parameter.
 
