@@ -1,6 +1,11 @@
 ## Security > Security Monitoring > Release Notes
 
-### Sept. 23, 2023
+### 2025. 08. 26.
+
+#### 기능 개선
+* [API] 인증 토큰 지원
+
+### Sept. 26, 2023
 
 #### Feature Updates
 * Changes in the API Guide
