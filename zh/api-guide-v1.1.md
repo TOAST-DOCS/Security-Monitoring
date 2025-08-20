@@ -8,12 +8,12 @@
 | Korea (Pyeongchon) region | https://kr2-secmon.api.nhncloudservice.com |
 | Korea (Gwangju) region | https://kr3-secmon.api.nhncloudservice.com |
 
-## Access Token
+## 인증 토큰
 
-* [https://docs.nhncloud.com/ko/nhncloud/ko/public-api/api-authentication/](https://docs.nhncloud.com/ko/nhncloud/ko/public-api/api-authentication/) 참고해서 Access Token 을 발급 받는다.
-* API 요청 헤더에 발급받은 토큰을 추가하여 요청한다.
-* 주의 
-    * Token 발급 유저는 요청할 Appkey 가 속한 프로젝트에 Security Monitoring Admin 권한을 가지고 있어야 한다. 
+* [API 호출 및 인증](https://docs.nhncloud.com/ko/nhncloud/ko/public-api/api-authentication/)을 참고하여 인증 토큰을 발급합니다.
+* API 요청 헤더에 발급한 토큰을 추가하여 요청합니다.
+> [주의] 
+> 토큰 발급 사용자는 요청할 Appkey가 속한 프로젝트에 Security Monitoring Admin 권한을 가지고 있어야 합니다. 
 
 ## Control registration API
 
