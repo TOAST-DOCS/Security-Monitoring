@@ -1,6 +1,6 @@
 ## Security > Security Monitoring > Release Notes
 
-### 2025. 08. 26.
+### August 26, 2025
 
 #### 기능 개선
 * [API] 인증 토큰 지원
