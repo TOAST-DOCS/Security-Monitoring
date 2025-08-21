@@ -8,6 +8,13 @@
 | 한국(평촌) 리전 | https://kr2-secmon.api.nhncloudservice.com |
 | 한국(광주) 리전 | https://kr3-secmon.api.nhncloudservice.com |
 
+## 인증 토큰
+
+* [API 호출 및 인증](https://docs.nhncloud.com/ko/nhncloud/ko/public-api/api-authentication/)을 참고하여 인증 토큰을 발급합니다.
+* API 요청 헤더에 발급한 토큰을 추가하여 요청합니다.
+> [주의] 
+> 토큰 발급 사용자는 요청할 Appkey가 속한 프로젝트에 Security Monitoring Admin 권한을 가지고 있어야 합니다. 
+
 ## 관제 등록 API
 
 ### 관제 미신청 목록 조회
