@@ -15,6 +15,7 @@
 > [주의] 
 > 토큰 발급 사용자는 요청할 Appkey가 속한 프로젝트에 Security Monitoring Admin 권한을 가지고 있어야 합니다. 
 
+
 ## Control registration API
 
 ### Search the list of non-registered control
