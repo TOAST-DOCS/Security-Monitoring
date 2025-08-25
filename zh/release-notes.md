@@ -2,8 +2,8 @@
 
 ### August 26, 2025
 
-#### 기능 개선
-* [API] 인증 토큰 지원
+#### Feature Updates
+* [API] Authentication token supported
 
 ### Sept. 26, 2023
 
@@ -55,87 +55,87 @@
 * [Console] Translation enabled into multiple languages
 
 
-### 2019.02.26
+### February 26, 2019
 
-#### 기능 개선
-* [Console] 공통 리소스 상품별 관리 대응
-
-
-### 2019.01.29
-
-#### 버그 수정
-* [API] 토큰 만료 판단 로직 변경
+#### Feature Updates
+* [Console] Management response by common resource product
 
 
-### 2018.12.27
+### January 29, 2019
 
-#### 기능 개선/변경
-* [Console] 유저 콘솔 연동
-* [API] 인스턴스 정보 변경 시 변경이력 및 메일발송 개선
-
-
-### 2018.11.27
-
-#### 기능 개선/변경
-* [API] 데이터 관리 정책 반영: 상품 비활성화 시 관련 데이터 삭제
+#### Bug fixes
+* [API] Changed token expiration judgement logic
 
 
-### 2018.10.23
+### December 27, 2018
 
-#### 기능 개선/변경
-* [Console] 보안관제 대응 현황: 공격유형 내용 표기 개선
-* [Console] 보안관제 대응 현황: 처리상태 변경 (대기 단계 미노출 처리)
-* [API] 그래프 데이터 취득 API 성능 개선
-* [API] 로깅 처리 개선
-
-#### 버그 수정
-* [Console] 개인정보동의 간헐적 버그 수정
+#### Feature Updates
+* [Console] Integrated user console
+* [API] Improved the change history and email delivery when changing instance information
 
 
-### 2018.08.28
+### November 27,2018
 
-#### 기능 개선/변경
-* [Console] 보안관제 유선연락 및 이메일 정보 수집 및 이용동의 추가
-
-
-### 2018.04.24
-
-#### 기능 개선/변경
-* [Console] 관제이벤트 티켓 상세내용 "심화분석" 내용 추가
-
-#### 버그 수정
-* [API] 대기 상태의 티켓의 처리완료 시 중복 저장 버그 수정
+#### Feature Updates
+* [API] Reflected data control policy: removed related data when disabling a product
 
 
-### 2018.02.22
+### October 23, 2018
 
-#### 버그 수정
+#### Feature Updates
+* [Console] Response status of security control: improved attack type content display
+* [Console] Response status of security control: changed processing status (processing not exposed to waiting stage)
+* [API] Improved graph data acquisition API performance
+* [API] Improved logging processing
 
-* [Console] 연동된 Instance가 없는 단일 로드밸런서에 대해 관제서비스 신청이 허용되는 버그 수정
-
-
-### 2017.09.21
-
-#### 기능 개선/변경
-
-* [Console] 보안관제 업무 수신 설정에 현재 설정값 표시
-
-#### 버그 수정
-* [API] 보안관제 업무 수신 설정 이메일 등록 버그 수정
-* [API] 업무처리내역 티켓 메일 발송 시 버그 수정
+#### Bug fixes
+* [Console] Fixed intermittent bug for personal information consent
 
 
-### 2017.07.20
+### August 28, 2018
 
-#### 기능 개선/변경
-
-* [Console] 보안 관제 신청 대상에 Loadbalancer 추가
-* [Console] 관제 이력 탭 추가
+#### Feature Updates
+* [Console] Added the consent to the collection and use of security control wired contact and email information
 
 
-### 2017.03.23
+### April 24, 2018
 
-#### 버그 수정
+#### Feature Updates
+* [Console] Added "In-depth Analysis" to the control event ticket details
 
-* [Console] 영문 적용 시 UI 깨짐 현상 수정
-* [Console] 공지사항 팝업 스크롤 버그 수정
+#### Bug fixes
+* [API] Fixed a bug that caused duplicate saving when processing a ticket in the waiting status was completed.
+
+
+### February 22, 2018
+
+#### Bug fixes
+
+* [Console] Fixed a bug that allowed control service requests to be made to a single load balancer without any integrated instances.
+
+
+### September 21, 2017
+
+#### Feature Updates
+
+* [Console] Displayed current settings in the security control task reception settings
+
+#### Bug fixes
+* [API] Fixed a bug in the email registration settings for receiving security control tasks
+* [API] Fixed a bug when sending work processing details ticket email
+
+
+### July 20, 2017
+
+#### Feature Updates
+
+* [Console] Added a Loadbalancer to the security control request target
+* [Console] Added control history tab
+
+
+### March 23, 2017
+
+#### Bug fixes
+
+* [Console] Fixed UI corruption when applying English
+* [Console] Fixed a bug in the notice pop-up scroll
