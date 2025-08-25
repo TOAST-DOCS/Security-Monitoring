@@ -8,12 +8,13 @@
 | Korea (Pyeongchon) region | https://kr2-secmon.api.nhncloudservice.com |
 | Korea (Gwangju) region | https://kr3-secmon.api.nhncloudservice.com |
 
-## 인증 토큰
+## Authentication token
 
-* [API 호출 및 인증](https://docs.nhncloud.com/ko/nhncloud/ko/public-api/api-authentication/)을 참고하여 인증 토큰을 발급합니다.
-* API 요청 헤더에 발급한 토큰을 추가하여 요청합니다.
-> [주의] 
-> 토큰 발급 사용자는 요청할 Appkey가 속한 프로젝트에 Security Monitoring Admin 권한을 가지고 있어야 합니다. 
+* [API call and authentication]Issue an authentication token by referring to (https://docs.nhncloud.com/ko/nhncloud/ko/public-api/api-authentication/).
+* Make a request by adding the issued token to the API request header.
+> [Caution] 
+> The token issuing user must have Security Monitoring Admin permissions on the project to which the requested Appkey belongs.
+
 
 ## Control registration API
 
@@ -29,9 +30,9 @@
 
 [Request header]
 
-| 이름 | 형식 | 필수 | 설명 |
+| Name | Format | Required | Description |
 | --- | --- | --- | --- |
-| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | Authentication token |
 
 [Example]
 
@@ -122,9 +123,9 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/no
 
 [Request header]
 
-| 이름 | 형식 | 필수 | 설명 |
+| Name | Format | Required | Description |
 | --- | --- | --- | --- |
-| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | Authentication token |
 
 [Example]
 
@@ -215,9 +216,9 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 
 [Request header]
 
-| 이름 | 형식 | 필수 | 설명 |
+| Name | Format | Required | Description |
 | --- | --- | --- | --- |
-| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | Authentication Token |
 
 [Request body]
 
@@ -299,9 +300,9 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 
 [Request header]
 
-| 이름 | 형식 | 필수 | 설명 |
+| Name | Format | Required | Description |
 | --- | --- | --- | --- |
-| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | Authentication token |
 
 [Example]
 
@@ -338,9 +339,9 @@ curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}
 
 [Request header]
 
-| 이름 | 형식 | 필수 | 설명 |
+| Name | Format | Required | Description |
 | --- | --- | --- | --- |
-| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | Authentication token |
 
 [Parameter]
 
@@ -433,9 +434,9 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/hi
 
 [Request header]
 
-| 이름 | 형식 | 필수 | 설명 |
+| Name | Format | Required | Description |
 | --- | --- | --- | --- |
-| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | Authentication token |
 
 [Example]
 
@@ -527,9 +528,9 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 
 [Request header]
 
-| 이름 | 형식 | 필수 | 설명 |
+| Name | Format | Required | Description |
 | --- | --- | --- | --- |
-| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | Authentication token |
 
 [Example]
 
@@ -592,9 +593,9 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 
 [Request header]
 
-| 이름 | 형식 | 필수 | 설명 |
+| Name | Format | Required | Description |
 | --- | --- | --- | --- |
-| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | Authentication token |
 
 [Example]
 
