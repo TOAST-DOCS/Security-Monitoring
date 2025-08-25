@@ -8,12 +8,12 @@
 | 韓国(ピョンチョン)リージョン | https://kr2-secmon.api.nhncloudservice.com |
 | 韓国(光州)リージョン | https://kr3-secmon.api.nhncloudservice.com |
 
-## 인증 토큰
+## 認証トークン
 
-* [API 호출 및 인증](https://docs.nhncloud.com/ko/nhncloud/ko/public-api/api-authentication/)을 참고하여 인증 토큰을 발급합니다.
-* API 요청 헤더에 발급한 토큰을 추가하여 요청합니다.
-> [주의] 
-> 토큰 발급 사용자는 요청할 Appkey가 속한 프로젝트에 Security Monitoring Admin 권한을 가지고 있어야 합니다. 
+* [APIの呼び出しと認証](https://docs.nhncloud.com/ko/nhncloud/ko/public-api/api-authentication/)を参考に、認証トークンを発行します。
+* APIリクエストのヘッダに発行したトークンを追加して、リクエストを送信します。
+> [注意] 
+> トークンを発行するユーザーは、リクエスト対象のAppKeyが属するプロジェクトのSecurity Monitoring Admin権限を持っている必要があります。
 
 ## 監視登録API
 
@@ -27,11 +27,11 @@
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/not-applied-vms |
 
-[요청 헤더]
+[リクエストヘッダ]
 
-| 이름 | 형식 | 필수 | 설명 |
+| 名前 | 形式 | 必須 | 説明 |
 | --- | --- | --- | --- |
-| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 認証トークン |
 
 [例]
 
@@ -61,21 +61,21 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/no
                     "fixedIp": "192.168.0.9",
                     "vmOs": "CentOS 7.8",
                     "vmIp": "",
-                    "serviceStatus": "미신청",
+                    "serviceStatus": "未申請",
                     "vmName": "vm1"
                 }
             ],
             "fixedIp": "192.168.0.18",
             "lbId": "8b031032-e0a0-4b36-8a98-642b6d3ca07b",
             "lbName": "lb1",
-            "serviceStatus": "미신청"
+            "serviceStatus": "未申請"
         },
         {
             "vmId": "2300727f-3771-4bdc-bba1-35ca12cb8635",
             "fixedIp": "192.168.0.4",
             "vmOs": "CentOS 7.8",
             "vmIp": "133.186.112.33",
-            "serviceStatus": "미신청",
+            "serviceStatus": "未申請",
             "vmName": "vm2"
         }
     ]
@@ -120,11 +120,11 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/no
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/applied-vms |
 
-[요청 헤더]
+[リクエストヘッダ]
 
-| 이름 | 형식 | 필수 | 설명 |
+| 名前 | 形式 | 必須 | 説明 |
 | --- | --- | --- | --- |
-| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 認証トークン |
 
 [例]
 
@@ -154,21 +154,21 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
                     "fixedIp": "192.168.0.9",
                     "vmOs": "CentOS 7.8",
                     "vmIp": "",
-                    "serviceStatus": "접수대기",
+                    "serviceStatus": "受付待機",
                     "vmName": "vm1"
                 }
             ],
             "fixedIp": "192.168.0.18",
             "lbId": "8b031032-e0a0-4b36-8a98-642b6d3ca07b",
             "lbName": "lb1",
-            "serviceStatus": "접수대기"
+            "serviceStatus": "受付待ち"
         },
         {
             "vmId": "2300727f-3771-4bdc-bba1-35ca12cb8635",
             "fixedIp": "192.168.0.4",
             "vmOs": "CentOS 7.8",
             "vmIp": "133.186.112.33",
-            "serviceStatus": "진행중",
+            "serviceStatus": "進行中",
             "vmName": "vm2"
         }
     ]
@@ -213,11 +213,11 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 | --- | --- |
 | POST | /v1.0/appkeys/{appKey}/vm |
 
-[요청 헤더]
+[リクエストヘッダ]
 
-| 이름 | 형식 | 필수 | 설명 |
+| 名前 | 形式 | 必須 | 説明 |
 | --- | --- | --- | --- |
-| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 認証トークン |
 
 [リクエスト本文]
 
@@ -253,7 +253,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 [フィールド]
 
 | 名前 | タイプ | 必須かどうか | デフォルト値 | 有効範囲 | 説明 |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | ----- | --- | ----- | --- |
 | vmList | List | 必須 |  |  | 監視申請vmリスト |
 | vmList[0].lbIp | String | 必須 |  |  | Load BalancerのFloating IP |
 | vmList[0].vm | List | 必須 |  |  | Load Balancerに接続されたVMリスト |
@@ -297,11 +297,11 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 | --- | --- |
 | DELETE | /v1.0/appkeys/{appKey}/vm |
 
-[요청 헤더]
+[リクエストヘッダ]
 
-| 이름 | 형식 | 필수 | 설명 |
+| 名前 | 形式 | 必須 | 説明 |
 | --- | --- | --- | --- |
-| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 認証トークン |
 
 [例]
 
@@ -336,16 +336,16 @@ curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/history |
 
-[요청 헤더]
+[リクエストヘッダ]
 
-| 이름 | 형식 | 필수 | 설명 |
+| 名前 | 形式 | 必須 | 説明 |
 | --- | --- | --- | --- |
-| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 認証トークン |
 
 [パラメータ]
 
 | 名前 | タイプ | 必須かどうか | デフォルト値 | 有効範囲 | 説明 |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | ----- | --- | ----- | --- |
 | page | Integer | 任意 | 1 |  | 照会するページ |
 
 [例]
@@ -371,24 +371,24 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/hi
     "previous": null,
     "results": [
         {
-            "status": "접수",
-            "reason": "사용자신청",
-            "contents": "보안관제 추가 진행 중 입니다.",
+            "status": "受付",
+            "reason": "ユーザー申請",
+            "contents": "セキュリティ監視の追加作業中です。"、
             "vmId": "vm1 | vm2",
             "meter": "NO",
-            "type": "신규",
+            "type": "新規",
             "regDate": "2021-07-09T15:34:29+09:00",
             "historyId": 4539
         },
         ...
         ,
         {
-            "status": "접수",
-            "reason": "사용자신청",
-            "contents": "보안관제 추가 진행 중 입니다.",
+            "status": "受付",
+            "reason": "ユーザー申請",
+            "contents": "セキュリティ監視の追加作業中です。"、
             "vmId": "vm3",
             "meter": "NO",
-            "type": "신규",
+            "type": "新規",
             "regDate": "2021-07-09T15:00:38+09:00",
             "historyId": 4530
         }
@@ -431,11 +431,11 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/hi
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/tickets |
 
-[요청 헤더]
+[リクエストヘッダ]
 
-| 이름 | 형식 | 필수 | 설명 |
+| 名前 | 形式 | 必須 | 説明 |
 | --- | --- | --- | --- |
-| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 認証トークン |
 
 [例]
 
@@ -448,7 +448,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 [パラメータ]
 
 | 名前 | タイプ | 必須かどうか | デフォルト値 | 有効範囲 | 説明 |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | ----- | --- | ----- | --- |
 | page | Integer | 任意 | 1 |  | 照会するページ |
 | detectDateOrder | String | 任意 | asc | asc/desc | detectDate 基準ソート方向 |
 
@@ -468,25 +468,25 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
     "results": [
         {
             "detectDate": "2020-02-03T16:49:00+09:00",
-            "isAttack": "정탐",
-            "ticketStatus": "처리완료",
-            "attackType": "Network 침해",
+            "isAttack": "正常検知"、
+            "ticketStatus": "処理完了",
+            "attackType": "ネットワーク侵害"、
             "srcIp": "120.24.86.122",
             "ticketId": "98425190186514912",
             "dstIp": "103.243.201.11",
-            "ticketType": "침해사고",
+            "ticketType": "侵害インシデント"、
             "ticketName": "K047_NHN_WebShell_Alert"
         },
         {
             "detectDate": "2016-04-21T01:09:00+09:00",
-            "isAttack": "정탐",
-            "ticketStatus": "처리완료",
+            "isAttack": "正常検知"、
+            "ticketStatus": "処理完了",
             "attackType": "Brute Force",
             "srcIp": "209.126.122.16",
             "ticketId": "96147997888715867",
             "dstIp": "103.194.108.15",
-            "ticketType": "침입탐지",
-            "ticketName": "판교IDC 미등록(103.194.108.15) Bruteforce_Inbound"
+            "ticketType": "侵入検知",
+            "ticketName": "パンギョIDC未登録(103.194.108.15) Bruteforce_Inbound"
         }
     ],
     "next": null
@@ -525,11 +525,11 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/tickets/{ticketId} |
 
-[요청 헤더]
+[リクエストヘッダ]
 
-| 이름 | 형식 | 필수 | 설명 |
+| 名前 | 形式 | 必須 | 説明 |
 | --- | --- | --- | --- |
-| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 認証トークン |
 
 [例]
 
@@ -553,9 +553,9 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
     },
     "data": {
         "result": [
-            "TEST 티켓 처리 완료",
-            "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" class=\"__se_tbl\" style=\"width:1400px\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">이름</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">종료시간</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">위험도</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">공격자 주소</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">공격자 포트</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">공격자 국가</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">목적지 주소</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">목적지 포트</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">목적지 국가</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">탐지방향</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">탐지패턴</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">공격횟수</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">UDS_Appkey_PIOLINK</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">2018-08-21 12:07:59</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Low</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">211.58.124.208</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">50741</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Korea, Republic of</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">133.186.242.15</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">80</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Japan</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Inbound</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">1</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"12\" style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Total : 1</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n",
-            "<p>정탐 심화분석 TEST</p>\r\n"
+            "TESTチケット処理完了",
+            "<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" class=\"__se_tbl\" style=\"width:1400px\">\r\n\t<tbody>\r\n\t\t<tr>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">名前</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">終了時刻</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">危険度</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">攻撃元アドレス</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">攻撃元ポート</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">攻撃元国</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">宛先アドレス</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">宛先ポート</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">宛先国</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">検知方向</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">検知パターン</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#eaeaea; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">攻撃回数</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">UDS_Appkey_PIOLINK</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">2018-08-21 12:07:59</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Low</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">211.58.124.208</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">50741</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Korea, Republic of</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">133.186.242.15</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">80</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Japan</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Inbound</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">&nbsp;</p>\r\n\t\t\t</td>\r\n\t\t\t<td style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">1</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t\t<tr>\r\n\t\t\t<td colspan=\"12\" style=\"background-color:#ffffff; height:18px\">\r\n\t\t\t<p style=\"text-align:center\">Total : 1</p>\r\n\t\t\t</td>\r\n\t\t</tr>\r\n\t</tbody>\r\n</table>\r\n"
+            "<p>正常検知深層分析TEST</p>\r\n"
         ],
         "desc": [
             "",
@@ -591,11 +591,11 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 | --- | --- |
 | GET | /v1.0/appkeys/{appKey}/events |
 
-[요청 헤더]
+[リクエストヘッダ]
 
-| 이름 | 형식 | 필수 | 설명 |
+| 名前 | 形式 | 必須 | 説明 |
 | --- | --- | --- | --- |
-| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 인증 토큰 |
+| <span style="color: rgb(33, 33, 33);">x-nhn-authorization</span> | String | <span style="color: rgb(49, 51, 56);">O</span> | 認証トークン |
 
 [例]
 
@@ -608,7 +608,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ev
 [パラメータ]
 
 | 名前 | タイプ | 必須かどうか | デフォルト値 | 有効範囲 | 説明 |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | ----- | --- | ----- | --- |
 | page | Integer | 任意 | 1 |  | 照会するページ |
 | startDate | Datetime | 任意 | 1日前のDatetime |  | 照会開始時間 |
 | endDate | Datetime | 任意 | 現在Datetime |  | 照会終了時間 |
