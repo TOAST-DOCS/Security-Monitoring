@@ -10,7 +10,7 @@
 
 ## Authentication token
 
-* [API call and authentication]Issue an authentication token by referring to (https://docs.nhncloud.com/ko/nhncloud/ko/public-api/api-authentication/).
+* Use the [User Access Key Token](https://docs.alpha-nhncloud.com/en/nhncloud/en/public-api/user-access-key-token/) to issue an authentication token.
 * Make a request by adding the issued token to the API request header.
 > [Caution] 
 > The token issuing user must have Security Monitoring Admin permissions on the project to which the requested Appkey belongs.
