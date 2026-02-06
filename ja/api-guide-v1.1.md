@@ -10,7 +10,7 @@
 
 ## 認証トークン
 
-* [APIの呼び出しと認証](https://docs.nhncloud.com/ko/nhncloud/ko/public-api/api-authentication/)を参考に、認証トークンを発行します。
+* [User Access Keyトークン](https://docs.alpha-nhncloud.com/ja/nhncloud/ja/public-api/user-access-key-token/)を参考に、認証トークンを発行します。
 * APIリクエストのヘッダに発行したトークンを追加して、リクエストを送信します。
 > [注意] 
 > トークンを発行するユーザーは、リクエスト対象のAppKeyが属するプロジェクトのSecurity Monitoring Admin権限を持っている必要があります。
