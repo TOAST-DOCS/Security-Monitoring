@@ -1,49 +1,63 @@
-## Security > Security Monitoring > 概要
+<!-- pre-align:aligned sig=dc4410b02916 -->
+
+<a id="security-security-monitoring-overview"></a>
+## Security > Security Monitoring > 概要 { #security-security-monitoring-overview }
 
 Security Monitoringは、NHN Cloudで数年間蓄積し、検証されたIDS/SIEMパターンおよび危機管理対応体系をベースに、24時間365日専門スタッフが高水準の同じセキュリティー監視サービスを提供します。
 
-## Security Monitoringの特徴
+<a id="benefits"></a>
+## Security Monitoringの特徴 { #benefits }
 
-### 統制されたセキュリティー監視センターで、セキュリティー監視サービスを提供します。
+<a id="security-monitoring-by-controlled-security-center"></a>
+### 統制されたセキュリティー監視センターで、セキュリティー監視サービスを提供します。 { #security-monitoring-by-controlled-security-center }
 - 物理的セキュリティー統制を完備(業務スペースに監視カメラを設置し、指紋認証により入退室を統制、ミラクル運営など)
 - 業務環境網の分離、情報流出統制および、強化されたPCセキュリティー設定
 - 音響設備と監視映像システムを活用した多様なセキュリティー監視ダッシュボード画面を構成し、リアルタイムで攻撃変化を認知して対応
 - サービス連続性の保障、無停電対策済
 
-### 24時間365日、専門スタッフによるセキュリティー監視分析および運営サービスを提供し、費用削減効果があります。
+<a id="247-cost-efficient-professional-monitoring-and-operation-services"></a>
+### 24時間365日、専門スタッフによるセキュリティー監視分析および運営サービスを提供し、費用削減効果があります。 { #247-cost-efficient-professional-monitoring-and-operation-services }
 - 多様なハッキングの脅威に対し、豊富な経験を持つ熟練の専門セキュリティー監視スタッフが、迅速に影響力と事故かどうかを判断
 - 最新攻撃トレンドを反映した探知パターン管理により、セキュリティーの脅威に対する迅速な対応と予防が可能
 - セキュリティー監視組織および維持に必要な費用を削減し、セキュリティー監視を専門家に委託することでIT担当者のセキュリティー業務負担を解消
 - 自社でセキュリティー組織を構成するためのセキュリティー人材確保の難しさを解消
 
-### 派遣監視業務水準に準じた、差別化された次世代遠隔セキュリティー監視サービスを提供します。
+<a id="distinctive-next-generation-remote-security-service"></a>
+### 派遣監視業務水準に準じた、差別化された次世代遠隔セキュリティー監視サービスを提供します。 { #distinctive-next-generation-remote-security-service }
 - NHN Cloudで数年間検証された強力なIDS/SIEM探知パターンによる優れた攻撃探知
 - 単純パターンマッチングではなく、シナリオベースのSIEM探知パターンを組み合わせ、差別化されたセキュリティー監視サービスを提供
 - すべての脅威試行に対するローデータ(raw data)および、サービスを考慮した影響力検証テストを試行
 - 単なるイベント通知ではなく、影響力検証と深みのあるパケットダンプ分析などを通して、脆弱性および疑わしい事項に対する通知サービスを提供
 
-### セキュリティー監視業務処理実行内容をコンソールでリアルタイムに確認できます。
+<a id="real-time-security-monitoring-checks-on-console"></a>
+### セキュリティー監視業務処理実行内容をコンソールでリアルタイムに確認できます。 { #real-time-security-monitoring-checks-on-console }
 - セキュリティー監視で、探知および分析された業務内容をコンソールですぐに確認可能
 - 業務時間外でも侵害状況発生時は、電話で即時に認知可能
 - セキュリティー監視サービス申請インスタンスで発生するIDS発生イベント画面を提供
 - セキュリティー監視業務処理内容をメールで受信可能
 
-## Security Monitoringの主な機能
+<a id="main-features"></a>
+## Security Monitoringの主な機能 { #main-features }
 
-### 侵入探知
+<a id="detection"></a>
+### 侵入探知 { #detection }
 - 24時間365日セキュリティー監視サポート
 - 高度化されたIDS/SIEM関連性探知パターン運用
-### 侵入分析
+<a id="analysis"></a>
+### 侵入分析 { #analysis }
 - イベントローデータ(raw data)およびパケットダンプによる深みのある分析業務を遂行
 - 弊社セキュリティー監視方法論により識別化された脅威をtrue alerm/false alermに分類し、影響力テストを試行
-### 侵入対応
+<a id="response"></a>
+### 侵入対応 { #response }
 - 識別された脆弱性に対する情報提供および伝達
 - 侵害事故発生時、伝達およびセキュリティー監視で提供可能な侵害経路、脆弱性情報を提供
 - 侵害事故発生時、パケットダンプなど、その後の対応業務を遂行し、事故分析をサポート
-### 侵入予防
+<a id="prevention"></a>
+### 侵入予防 { #prevention }
 - 対外動向情報を周期的に収集し、新規の脅威に対する探知パターンを作成
 - 過度なfalse alermなど、リアルタイムイベント対応の障害要因に対するパターンを最適化
-### 情報提供
+<a id="data-supply"></a>
+### 情報提供 { #data-supply }
 - セキュリティー監視WORK-FLOWシステムを利用し、コンソールで監視業務状況を提供
 - IDSイベント発生状況ダッシュボードを提供
 - セキュリティー監視業務状況のメール送信サービスを提供
@@ -51,6 +65,7 @@ Security Monitoringは、NHN Cloudで数年間蓄積し、検証されたIDS/SIE
 
 ![securitymonitoring_overview_en_210422.png](https://static.toastoven.net/prod_mss/securitymonitoring_overview_en_210422.png)
 
-### 参考
+<a id="reference"></a>
+### 参考 { #reference }
 * WAF(web application firewall)はWEB Firewallサービスで利用できます。
 * DDoS攻撃のブロックはDDoS Guardサービスで行うことができます。

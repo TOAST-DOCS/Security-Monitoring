@@ -1,4 +1,7 @@
-## Security > Security Monitoring > APIガイド
+<!-- pre-align:aligned sig=42c0dd0fa82a -->
+
+<a id="security-security-monitoring-api-guide"></a>
+## Security > Security Monitoring > APIガイド { #security-security-monitoring-api-guide }
 
 [APIドメイン]
 
@@ -6,10 +9,13 @@
 | --- | --- |
 | 韓国(パンギョ、ピョンチョン)リージョン | https://kr1-secmon.api.nhncloudservice.com |
 
-## 監視登録API
+<a id="control-registration-api"></a>
+## 監視登録API { #control-registration-api }
 
-### 監視 未申請リスト照会
+<a id="search-the-list-of-non-registered-control"></a>
+### 監視 未申請リスト照会 { #search-the-list-of-non-registered-control }
 
+<a id="search-the-list-of-non-registered-control-request"></a>
 #### リクエスト
 
 [URI]
@@ -31,6 +37,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/no
  -H "Content-Type: application/json"
 ```
 
+<a id="search-the-list-of-non-registered-control-response"></a>
 #### レスポンス
 
 [レスポンス本文]
@@ -100,8 +107,10 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/no
 | results[1].serviceStatus | String | VMのセキュリティ監視申請状態 |
 | results[1].vmName | String | VMの名前 |
 
-### 監視申請リスト照会
+<a id="search-the-list-of-control-application"></a>
+### 監視申請リスト照会 { #search-the-list-of-control-application }
 
+<a id="search-the-list-of-control-application-request"></a>
 #### リクエスト
 
 [URI]
@@ -123,6 +132,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
  -H "Content-Type: application/json"
 ```
 
+<a id="search-the-list-of-control-application-response"></a>
 #### レスポンス
 
 [レスポンス本文]
@@ -192,8 +202,10 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 | results[1].serviceStatus | String | VMのセキュリティ監視申請状態 |
 | results[1].vmName | String | VMの名前 |
 
-### 監視追加
+<a id="add-control"></a>
+### 監視追加 { #add-control }
 
+<a id="add-control-request"></a>
 #### リクエスト
 
 [URI]
@@ -262,6 +274,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 
 * Load Balancerに接続された形態のVMの監視申請を行うには、vmList[0]のデータを必ず入力しなければならず、Load Balancerに接続されていないVMを監視申請するにはvmList[1]のデータを必ず入力する必要があります。
 
+<a id="add-control-response"></a>
 #### レスポンス
 
 [レスポンス本文]
@@ -276,8 +289,10 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 }
 ```
 
-### 監視解除
+<a id="release-control"></a>
+### 監視解除 { #release-control }
 
+<a id="release-control-request"></a>
 #### リクエスト
 
 [URI]
@@ -301,6 +316,7 @@ curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}
 ```
 * Load Balancerに接続された形態のVMを監視解除するにはvmIdパラメータにLoad Balancer IDだけを入力する必要があります。
 
+<a id="release-control-response"></a>
 #### レスポンス
 
 [レスポンス本文]
@@ -315,8 +331,10 @@ curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}
 }
 ```
 
-### 監視状態変更履歴照会
+<a id="viewing-change-history-of-control-status"></a>
+### 監視状態変更履歴照会 { #viewing-change-history-of-control-status }
 
+<a id="viewing-change-history-of-control-status-request"></a>
 #### リクエスト
 
 [URI]
@@ -338,6 +356,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/hi
  -H "Content-Type: application/json"
 ```
 
+<a id="viewing-change-history-of-control-status-response"></a>
 #### レスポンス
 
 [レスポンス本文]
@@ -401,10 +420,13 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/hi
 | next | String | 次のページリンクURL |
 
 
-## セキュリティ監視対応状況
+<a id="security-control-response-status"></a>
+## セキュリティ監視対応状況 { #security-control-response-status }
 
-### 対応状況リスト照会
+<a id="search-response-status-list"></a>
+### 対応状況リスト照会 { #search-response-status-list }
 
+<a id="search-response-status-list-request"></a>
 #### リクエスト
 
 [URI]
@@ -426,6 +448,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 | --- | --- | --- | --- | --- | --- |
 | page | Integer | 任意 | 1 |  | 照会するページ |
 
+<a id="search-response-status-list-response"></a>
 #### レスポンス
 
 [レスポンス本文]
@@ -489,8 +512,10 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 | previous | String | 以前ページリンクURL |
 | next | String | 次のページリンクURL |
 
-### 対応状況詳細情報
+<a id="detailed-information-on-response-status"></a>
+### 対応状況詳細情報 { #detailed-information-on-response-status }
 
+<a id="detailed-information-on-response-status-request"></a>
 #### リクエスト
 
 [URI]
@@ -506,6 +531,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
  -H "Content-Type: application/json"
 ```
 
+<a id="detailed-information-on-response-status-response"></a>
 #### レスポンス
 
 [レスポンス本文]
@@ -547,8 +573,10 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 | desc[0] | String | チケット名 |
 | desc[1] | String | チケットの説明 |
 
-### 詳細イベント状況
+<a id="detailed-event-status"></a>
+### 詳細イベント状況 { #detailed-event-status }
 
+<a id="detailed-event-status-request"></a>
 #### リクエスト
 
 [URI]

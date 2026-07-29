@@ -1,4 +1,7 @@
-## Security > Security Monitoring > API 가이드
+<!-- pre-align:aligned sig=b43178b90973 -->
+
+<a id="security-security-monitoring-api-guide"></a>
+## Security > Security Monitoring > API 가이드 { #security-security-monitoring-api-guide }
 
 [API 도메인]
 
@@ -8,17 +11,21 @@
 | 한국(평촌) 리전 | https://kr2-secmon.api.nhncloudservice.com |
 | 한국(광주) 리전 | https://kr3-secmon.api.nhncloudservice.com |
 
-## 인증 토큰
+<a id="authentication-token"></a>
+## 인증 토큰 { #authentication-token }
 
 * [User Access Key 토큰](https://docs.alpha-nhncloud.com/ko/nhncloud/ko/public-api/user-access-key-token/)을 참고하여 인증 토큰을 발급합니다.
 * API 요청 헤더에 발급한 토큰을 추가하여 요청합니다.
 > [주의] 
 > 토큰 발급 사용자는 요청할 Appkey가 속한 프로젝트에 Security Monitoring Admin 권한을 가지고 있어야 합니다.
 
-## 관제 등록 API
+<a id="control-registration-api"></a>
+## 관제 등록 API { #control-registration-api }
 
-### 관제 미신청 목록 조회
+<a id="search-the-list-of-non-registered-control"></a>
+### 관제 미신청 목록 조회 { #search-the-list-of-non-registered-control }
 
+<a id="search-the-list-of-non-registered-control-request"></a>
 #### 요청
 
 [URI]
@@ -41,6 +48,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/no
  -H "x-nhn-authorization: {access_token}"
 ```
 
+<a id="search-the-list-of-non-registered-control-response"></a>
 #### 응답
 
 [응답 본문]
@@ -110,8 +118,10 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/no
 | results[1].serviceStatus | String | VM의 보안관제 신청 상태 |
 | results[1].vmName | String | VM의 이름 |
 
-### 관제 신청 목록 조회
+<a id="search-the-list-of-control-application"></a>
+### 관제 신청 목록 조회 { #search-the-list-of-control-application }
 
+<a id="search-the-list-of-control-application-request"></a>
 #### 요청
 
 [URI]
@@ -134,6 +144,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
  -H "x-nhn-authorization: {access_token}"
 ```
 
+<a id="search-the-list-of-control-application-response"></a>
 #### 응답
 
 [응답 본문]
@@ -203,8 +214,10 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 | results[1].serviceStatus | String | VM의 보안관제 신청 상태 |
 | results[1].vmName | String | VM의 이름 |
 
-### 관제 추가
+<a id="add-control"></a>
+### 관제 추가 { #add-control }
 
+<a id="add-control-request"></a>
 #### 요청
 
 [URI]
@@ -273,6 +286,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 
 * Load Balancer에 연결된 형태의 VM을 관제 신청하기 위해서는 vmList[0]의 데이터를 필수로 입력해야하며, Load Balancer에 연결되지 않은 VM을 관제 신청하기 위해서는 vmList[1]의 데이터를 필수로 입력하여야 합니다.
 
+<a id="add-control-response"></a>
 #### 응답
 
 [응답 본문]
@@ -287,8 +301,10 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ap
 }
 ```
 
-### 관제 해제
+<a id="release-control"></a>
+### 관제 해제 { #release-control }
 
+<a id="release-control-request"></a>
 #### 요청
 
 [URI]
@@ -313,6 +329,7 @@ curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}
 
 * Load Balancer에 연결된 형태의 VM을 관제 해제하기 위해서는 vmId 파라미터에 Load Balancer ID만을 입력하여야 합니다.
 
+<a id="release-control-response"></a>
 #### 응답
 
 [응답 본문]
@@ -327,8 +344,10 @@ curl -X DELETE "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}
 }
 ```
 
-### 관제 상태 변경 이력 조회
+<a id="viewing-change-history-of-control-status"></a>
+### 관제 상태 변경 이력 조회 { #viewing-change-history-of-control-status }
 
+<a id="viewing-change-history-of-control-status-request"></a>
 #### 요청
 
 [URI]
@@ -357,6 +376,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/hi
  -H "x-nhn-authorization: {access_token}"
 ```
 
+<a id="viewing-change-history-of-control-status-response"></a>
 #### 응답
 
 [응답 본문]
@@ -419,10 +439,13 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/hi
 | previous | String | 이전 페이지 링크 URL |
 | next | String | 다음 페이지 링크 URL |
 
-## 보안관제 대응 현황
+<a id="security-control-response-status"></a>
+## 보안관제 대응 현황 { #security-control-response-status }
 
-### 대응 현황 목록 조회
+<a id="search-response-status-list"></a>
+### 대응 현황 목록 조회 { #search-response-status-list }
 
+<a id="search-response-status-list-request"></a>
 #### 요청
 
 [URI]
@@ -452,6 +475,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 | page | Integer | 선택 | 1 |  | 조회할 페이지 |
 | detectDateOrder | String | 선택 | asc | asc/desc | detectDate 기준 정렬 방향 |
 
+<a id="search-response-status-list-response"></a>
 #### 응답
 
 [응답 본문]
@@ -515,8 +539,10 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 | previous | String | 이전 페이지 링크 URL |
 | next | String | 다음 페이지 링크 URL |
 
-### 대응 현황 상세 정보
+<a id="detailed-information-on-response-status"></a>
+### 대응 현황 상세 정보 { #detailed-information-on-response-status }
 
+<a id="detailed-information-on-response-status-request"></a>
 #### 요청
 
 [URI]
@@ -539,6 +565,7 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
  -H "x-nhn-authorization: {access_token}"
 ```
 
+<a id="detailed-information-on-response-status-response"></a>
 #### 응답
 
 [응답 본문]
@@ -580,8 +607,10 @@ curl -X GET "https://kr1-secmon.api.nhncloudservice.com/v1.0/appkeys/{appKey}/ti
 | desc[0] | String | 티켓명 |
 | desc[1] | String | 티켓 설명 |
 
-### 상세 이벤트 현황
+<a id="detailed-event-status"></a>
+### 상세 이벤트 현황 { #detailed-event-status }
 
+<a id="detailed-event-status-request"></a>
 #### 요청
 
 [URI]
