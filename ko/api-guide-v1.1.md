@@ -14,7 +14,7 @@
 <a id="authentication-token"></a>
 ## 인증 토큰 { #authentication-token }
 
-* [User Access Key 토큰](https://docs.alpha-nhncloud.com/ko/nhncloud/ko/public-api/user-access-key-token/)을 참고하여 인증 토큰을 발급합니다.
+* [User Access Key 토큰](/nhncloud/ko/public-api/user-access-key-token/)을 참고하여 인증 토큰을 발급합니다.
 * API 요청 헤더에 발급한 토큰을 추가하여 요청합니다.
 > [주의] 
 > 토큰 발급 사용자는 요청할 Appkey가 속한 프로젝트에 Security Monitoring Admin 권한을 가지고 있어야 합니다.
