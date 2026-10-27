@@ -1,0 +1,75 @@
+<!-- pre-align:aligned sig=470d545def88 -->
+
+<a id="security-ddos-guard-console-user-guide"></a>
+## Security > DDoS Guard > 콘솔 사용 가이드 { #security-ddos-guard-console-user-guide }
+
+여기에서는 DDoS Guard 콘솔 사용 방법을 설명합니다.
+
+DDoS Guard 서비스를 사용하려면 **NHN Cloud 콘솔**에 로그인하고, 서비스 선택에서 **Security > DDoS Guard**를 클릭하여 활성화합니다.
+
+
+<a id="how-to-apply-and-release-managed"></a>
+## Managed 신청 및 해제 방법 { #how-to-apply-and-release-managed }
+<a id="apply"></a>
+### 신청 { #apply }
+1. DDoS Guard 콘솔에서 서비스 신청 현황 탭을 클릭하고 Managed 탭에서 **Zone 신청** 버튼을 클릭합니다. 
+2. Zone 정보와 보호 대상(IP, 도메인)을 입력하고, 대응 모드를 선택합니다.
+3. 전파 담당자를 입력하고 개인정보 수집 및 이용에 동의한 후, **저장** 버튼을 클릭합니다.
+4. 신청이 완료되면 운영 담당자가 내용을 확인하여 처리합니다. Managed 서비스가 시작되면 현황이 **운영 중**으로 변경됩니다.
+
+<a id="release"></a>
+### 해제 { #release }
+1. Managed 신청 현황 목록 중 해제를 원하는 대상을 선택하고 **해제** 버튼을 클릭합니다.
+2. Zone 해제 약관 내용에 동의한 후, **확인** 버튼을 클릭합니다.
+3. 해제가 요청되면 운영 담당자가 내용을 확인하여 처리합니다.
+
+<a id="managed-report-settings"></a>
+## Managed 보고서 설정 { #managed-report-settings }
+<a id="managed-report-settings-apply"></a>
+### 신청 { #managed-report-settings-apply }
+1. Managed 탭에서 **보고서 설정** 버튼을 클릭합니다.
+2. **이용 및 메일 수신 신청** 버튼을 클릭하여 **신청**으로 변경합니다.
+3. 보고서 유형을 선택하고 **확인** 버튼을 클릭합니다.
+
+<a id="managed-report-settings-release"></a>
+### 해제 { #managed-report-settings-release }
+1. Managed 탭에서 **보고서 설정** 버튼을 클릭합니다.
+2. **이용 및 메일 수신 신청** 버튼을 클릭하여 **신청 안 함**으로 변경합니다.
+3. **확인** 버튼을 클릭합니다.
+
+
+<a id="apply-and-release-simulation-training-support"></a>
+## 모의 훈련 지원 신청 및 해제 { #apply-and-release-simulation-training-support }
+<a id="apply-and-release-simulation-training-support-apply"></a>
+### 신청 { #apply-and-release-simulation-training-support-apply }
+1. DDoS Guard 콘솔에서 서비스 신청 현황 탭을 클릭하고 모의 훈련 지원 탭에서 **신청** 버튼을 클릭합니다.
+2. 모의 훈련 지원 이용 약관을 확인하고 동의한 후, **확인** 버튼을 클릭합니다.
+3. 기본 정보, 훈련 정보, 공격자 IP 대역, 훈련 대상, 수행 담당자 정보, 훈련 시나리오 정보를 입력합니다.
+4. 부하 테스트는 선택 사항으로 필요 시 정보를 입력하고 **저장** 버튼을 클릭합니다.
+5. 신청이 완료되면 운영 담당자가 내용을 확인하여 처리합니다.
+
+<a id="delete"></a>
+### 삭제 { #delete }
+1. 모의 훈련 지원 신청 현황 목록 중 삭제를 원하는 대상을 선택하고 **삭제** 버튼을 클릭합니다.
+2. 모의 훈련 지원 삭제 약관 내용에 동의한 후, **확인** 버튼을 클릭합니다.
+
+<a id="check-traffic-status"></a>
+## 트래픽 현황 확인 { #check-traffic-status }
+- 트래픽 현황 탭에서 DDoS 장비를 통해 보호 대상으로 유입되는 모든 트래픽과 차단 트래픽에 대해 통계 정보를 확인할 수 있습니다. 
+  - 트래픽 통계 : DDoS 장비로 유입되는 트래픽 통계 정보를 표시합니다. 
+  - 차단 트래픽 통계 : DDoS 장비로 차단되는 트래픽 통계 정보를 표시합니다.
+  - 트래픽 로그는 최근 1달 데이터를 보관합니다.
+
+![%E1%84%90%E1%85%B3%E1%84%85%E1%85%A2%E1%84%91%E1%85%B5%E1%86%A8%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%AA%E1%86%BC_%E1%84%90%E1%85%B3%E1%84%85%E1%85%A2%E1%84%91%E1%85%B5%E1%86%A8%E1%84%90%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A8.png](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_ddosguard/%E1%84%90%E1%85%B3%E1%84%85%E1%85%A2%E1%84%91%E1%85%B5%E1%86%A8%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%AA%E1%86%BC_%E1%84%90%E1%85%B3%E1%84%85%E1%85%A2%E1%84%91%E1%85%B5%E1%86%A8%E1%84%90%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A8.png)
+
+![%E1%84%90%E1%85%B3%E1%84%85%E1%85%A2%E1%84%91%E1%85%B5%E1%86%A8%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%AA%E1%86%BC_%E1%84%8E%E1%85%A1%E1%84%83%E1%85%A1%E1%86%AB%E1%84%90%E1%85%B3%E1%84%85%E1%85%A2%E1%84%91%E1%85%B5%E1%86%A8%E1%84%90%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A8.png](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_ddosguard/%E1%84%90%E1%85%B3%E1%84%85%E1%85%A2%E1%84%91%E1%85%B5%E1%86%A8%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%AA%E1%86%BC_%E1%84%8E%E1%85%A1%E1%84%83%E1%85%A1%E1%86%AB%E1%84%90%E1%85%B3%E1%84%85%E1%85%A2%E1%84%91%E1%85%B5%E1%86%A8%E1%84%90%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A8.png)
+
+<a id="check-event-status"></a>
+## 이벤트 현황 확인 { #check-event-status }
+- 이벤트 현황 탭에서 이벤트 통계 정보와 상세 이벤트 현황을 확인할 수 있습니다.
+- 이벤트 로그는 최근 1년 데이터를 보관하며, 최대 1개월 단위로 조회할 수 있습니다.
+
+![%E1%84%8B%E1%85%B5%E1%84%87%E1%85%A6%E1%86%AB%E1%84%90%E1%85%B3%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%AA%E1%86%BC_%E1%84%90%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A8.png](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_ddosguard/%E1%84%8B%E1%85%B5%E1%84%87%E1%85%A6%E1%86%AB%E1%84%90%E1%85%B3%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%AA%E1%86%BC_%E1%84%90%E1%85%A9%E1%86%BC%E1%84%80%E1%85%A8.png)
+
+![%E1%84%8B%E1%85%B5%E1%84%87%E1%85%A6%E1%86%AB%E1%84%90%E1%85%B3%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%AA%E1%86%BC_%E1%84%8C%E1%85%A9%E1%84%92%E1%85%AC.png](https://kr1-api-object-storage.nhncloudservice.com/v1/AUTH_2acdfabf4efe4efc8a04c00b348110c9/cdn_origin/prod_ddosguard/%E1%84%8B%E1%85%B5%E1%84%87%E1%85%A6%E1%86%AB%E1%84%90%E1%85%B3%E1%84%92%E1%85%A7%E1%86%AB%E1%84%92%E1%85%AA%E1%86%BC_%E1%84%8C%E1%85%A9%E1%84%92%E1%85%AC.png)
+
